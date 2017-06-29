@@ -14,5 +14,6 @@
             </div>
         </div>        
         {{ Form::submit('建立', array('class' => 'btn btn-success pull-right')) }}
+        <a href="/backend">上一頁</a>
     </div>
 </div>
