@@ -27,7 +27,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $level = User::find(Auth::id())->level;
+        
+        if (Auth::user()->is_admin) {
+            $level = '3';
+        }
+        else if (Auth::user()->is_store) {
+            $level = '2';
+        } else {
+            $level = '0';
+        }
+
         switch ($level) {
             case '3':
                 return redirect("/admin");
