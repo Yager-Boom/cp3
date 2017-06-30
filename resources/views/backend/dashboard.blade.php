@@ -7,7 +7,7 @@
             <a>Create</a>
             @foreach($stores as $list)
             <div class="panel panel-default">
-            <a class="btn btn-info pull-right">Enter</a>
+            <a class="btn btn-info pull-right">Enter123</a>
                 <div class="panel-heading">Domain-> {{ $list->domain}}</div>
 
                 <div class="panel-body">
