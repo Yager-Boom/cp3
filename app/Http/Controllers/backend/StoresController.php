@@ -82,7 +82,7 @@ class StoresController extends Controller
 
     public function edit()
     {
-        return view('');
+        return view('backend.stores.edit');
     }
 
 }
