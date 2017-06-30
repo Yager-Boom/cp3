@@ -28,7 +28,6 @@ class ImgService
         {
             $result = '';
         }
-        dd($result);
 
 		return $result;
 	}
