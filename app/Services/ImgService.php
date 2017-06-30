@@ -23,9 +23,12 @@ class ImgService
             $upload_success = $file->move($destination_path, $file_name);
             $resources = "/imgs/store/logo/$file_name";
             $result = $resources;
-        }else{
+        }
+        else
+        {
             $result = '';
         }
+        dd($result);
 
 		return $result;
 	}
