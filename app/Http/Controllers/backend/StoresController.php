@@ -52,9 +52,12 @@ class StoresController extends Controller
     {
         try{
             $user = $this->user();
-            if (Input::hasFile('logo')){
+            if (Input::hasFile('logo'))
+            {
                 $logo = $this->imgService->savelogo(Input::file('logo'));
-            }else{
+            }
+            else
+            {
                 $logo = "";
             }
             $store = new Store(array(
@@ -70,10 +73,16 @@ class StoresController extends Controller
         catch (\Exception $e)
         {
             $errorCode = $e->errorInfo[1];
-            if($errorCode == 1062){
+            if($errorCode == 1062)
+            {
                 return redirect('/backend');
             }
         }
+    }
+
+    public function edit()
+    {
+        return view('');
     }
 
 }
