@@ -46,7 +46,9 @@ class ImgService
             $upload_success = $file->move($destination_path, $file_name);
             $resources = "/tmp/$tmpPath/$file_name";
             $result = $resources;
-        }else{
+        }
+        else
+        {
             $result = '';
         }
 
