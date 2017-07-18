@@ -15,6 +15,9 @@ class CreateProductOptionsTable extends Migration
     {
         Schema::create('product_options', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('product_id');
+            $table->string('pdt_option_item');//SIZE, COLOR群組
+            $table->string('pdt_img');//預設圖
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreateUserStoresTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('store_id');
-            $table->integer('level');            
+            $table->integer('level');//未來可另開一個level表，針對每個用戶的權限做管理
             $table->timestamps();
         });
     }

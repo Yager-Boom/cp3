@@ -5,8 +5,9 @@ Route::group(['prefix' => 'backend'], function()
 	Route::group(['middleware' => 'auth'], function()
     {
 		Route::get('/', 'backend\StoresController@index');
-		Route::get('/products', 'backend\ProductsController@index');
+		Route::post('/edit-upload', 'backend\ImagesController@uploadFile');
 		Route::resource('stores', 'backend\StoresController');
+		Route::resource('/stores/{store_id}/products', 'backend\ProductsController');
 	});
 }); 
 

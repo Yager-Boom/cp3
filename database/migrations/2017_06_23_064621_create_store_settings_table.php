@@ -17,6 +17,7 @@ class CreateStoreSettingsTable extends Migration
         {
             $table->increments('id');
             $table->string('store_id');
+            $table->integer('shippingfree'); //免運門檻
             $table->text('head_script');
             $table->text('body_script');
             $table->string('fb');

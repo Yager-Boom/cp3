@@ -20,20 +20,13 @@ class BackendController extends BaseController
         
         return $user;
     }
-
-    public function StoreInfo($storeId)
+    public function getRadomStr()
     {
-        $stores = $this->storeRepository->getStore($this->User()->id, $storeId);
-        return $stores;
-    }
+    	$str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    	$getRadomCode=substr(str_shuffle($str),0,8);
+    	$datetime = date ("mdHis");
+    	$result = $datetime . '-' . $getRadomCode;
 
-    public function StoreLists()
-    {
-        // 報表
-        // $store_ids = $this->storeRepository->getStoreIds($this->User()->id);
-        // dd($store_ids);
-        $stores = $this->storeRepository->getStoreList($this->User()->id);
-
-        return $stores;
+    	return $result;
     }
 }

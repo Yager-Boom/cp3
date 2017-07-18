@@ -15,6 +15,11 @@ class CreateProductPricesTable extends Migration
     {
         Schema::create('product_prices', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('product_id');
+            $table->string('guid');
+            $table->integer('pdt_base');//出貨數量
+            $table->string('pdt_item_title');
+            $table->string('pdt_item_subtitle');
             $table->timestamps();
         });
     }

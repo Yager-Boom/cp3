@@ -16,8 +16,9 @@ class CreateStoresTable extends Migration
         Schema::create('stores', function (Blueprint $table) {
             $table->increments('id');
             $table->string('domain')->index()->unique();
+            $table->integer('type')->default('0');
             $table->string('logo');
-            $table->integer('shippingfree');
+            $table->string('alias');        
             $table->integer('status')->default('0');
             $table->timestamps();
         });

@@ -19,6 +19,10 @@ class CreateStoreInfosTable extends Migration
             $table->string('store_id');
             $table->text('about');
             $table->string('shippingmemo');
+            $table->string('address');
+            $table->string('tel');
+            $table->string('fax');
+            $table->string('email');
 
             $table->timestamps();
         });
