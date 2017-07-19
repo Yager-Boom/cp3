@@ -31,7 +31,7 @@ class StoresController extends Controller
             return redirect('/backend');
         }
         // obj -> array
-        $store = $store->first(); 
+        $store = $store->first();
         return view('backend.stores.show', compact('store'));
     }
     public function create()
