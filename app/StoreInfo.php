@@ -8,6 +8,8 @@ class StoreInfo extends Model
 {
     function show($storeId)
     {
-        dd($storeId);
+        return \DB::table('stores')
+                  ->where('id',$storeId)
+                  ->get();
     }
 }

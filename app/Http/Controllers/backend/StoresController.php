@@ -42,6 +42,7 @@ class StoresController extends Controller
         // obj -> array
         $store = $this->storeInfo->show($storeId)->first();
         $store = $store->first();
+        dd($store);
 
         return view('backend.stores.show', compact('store'));
     }
