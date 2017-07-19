@@ -5,7 +5,11 @@
     <div class="row">
         <div class="col-md-3">
 	        <ul>
-	        	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
+	        	<li>
+					<a href="/backend/stores/{{ $store->id }}/products">
+						商品
+					</a>
+				</li>
 	        </ul>
         </div>
         <div class="col-md-9">
