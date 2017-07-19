@@ -7,17 +7,19 @@ use App\Http\Controllers\BackendController as Controller;
 use App\Services\StoreService;
 use App\Repositories\StoreRepository;
 use App\Services\ImgService;
+use App\StoreInfo;
 
 use App\Store;
 use App\User;
 
 class StoresController extends Controller
 {
-    public function __construct(StoreService $storeService, ImgService $imgService)
+    public function __construct(StoreService $storeService, ImgService $imgService, StoreInfo $storeInfo)
     {
         $this->middleware('isStore');
         $this->storeService = $storeService;
         $this->imgService = $imgService;
+        $this->storeInfo = $storeInfo;
     }
     
     public function index() //商家Dashboard
@@ -38,7 +40,7 @@ class StoresController extends Controller
         }
 
         // obj -> array
-        $store = $this->StoreInfo()->show($storeId)->first();
+        $store = $this->StoreInfo($storeId)->first();
         $store = $store->first();
 
         return view('backend.stores.show', compact('store'));
