@@ -16,9 +16,8 @@ class StoresController extends Controller
     public function __construct(StoreService $storeService, ImgService $imgService)
     {
         $this->middleware('isStore');
-		$this->storeService = $storeService;
+        $this->storeService = $storeService;
         $this->imgService = $imgService;
-        $this->storeRepository = $storeRepository;
     }
     
     public function index() //商家Dashboard
