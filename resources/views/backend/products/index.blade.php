@@ -13,6 +13,10 @@
                         商品名稱->{{ $list->title}}
                     </div>
 
+                    <div>
+                        <input type="submit" value="{{$list->id}}" name="product_id">
+                    </div>
+
                     <div class="panel-body">
                         <img src="{{ $list->cover }}" width="150px" height="150px">
                     </div>
