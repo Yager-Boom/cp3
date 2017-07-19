@@ -13,7 +13,6 @@ use App\User;
 
 class StoresController extends Controller
 {
-    public function __construct(StoreService $storeService, ImgService $imgService, StoreRepository $storeRepository)
     public function __construct(StoreService $storeService, ImgService $imgService)
     {
         $this->middleware('isStore');
@@ -23,8 +22,7 @@ class StoresController extends Controller
     }
     
     public function index() //商家Dashboard
-    {   
-        $stores = $this->StoreLists();  
+    {
         $stores = $this->storeService->getLists($this->User()->id);
 
         return view('backend.stores.index', compact('stores'));
@@ -33,7 +31,6 @@ class StoresController extends Controller
     public function show($storeId) //商店Dashboard
     {
         // object
-        $store = $this->StoreInfo($storeId);
         $store = $this->storeService->getOne($this->User()->id, $storeId);
 
         if($store->isEmpty())
@@ -50,7 +47,6 @@ class StoresController extends Controller
 
     public function create()
     {
-        return view('backend.stores.create');
         return view('backend.stores.create', compact('randStr'));
     }
 
@@ -62,43 +58,27 @@ class StoresController extends Controller
      */ 
     public function store(Request $request)
     {
-        try{
         try {
             $user = $this->user();
-            if (Input::hasFile('logo')){
-                $logo = $this->imgService->savelogo(Input::file('logo'));
-            }else{
-
-
-            $randStr = $this->getRadomStr(); 
-
+            $randStr = $this->getRadomStr();
             if (Input::hasFile('file')) {
                 $logo = $this->imgService->saveFile(Input::file('file'), $randStr);
             } else {
-
                 $logo = "";
             }
-            $store = new Store(array(
-
             $store_arr = new Store(array(
                 'domain' => $request->domain,
-                'shippingfree' => $request->shippingfree,
-                'fee' => $request->fee,
                 'alias' => $randStr,
                 'logo' => $logo
             ));
-            $store = $user->stores()->save($store);
             // dd($store_arr);
             $store = $user->stores()->save($store_arr);
-
             return redirect('/backend');
         }
         catch (\Exception $e)
         {
             $errorCode = $e->errorInfo[1];
-            if($errorCode == 1062){
             if ($errorCode == 1062) {
-
                 return redirect('/backend');
             }
         }
