@@ -79,7 +79,7 @@ class ProductsController extends Controller
     public function destroy($storeId, $productId)
     {
         
-        Product::destroy($productId);
+        Product::destroy($productId); 
     }
 
 }
