@@ -74,11 +74,15 @@ class ProductsController extends Controller
                 return redirect('/backend');
             }
         }		
+
 	}
-    public function destroy(Request $request)
+   
+	
+    
+     function destroy($storeId, $productId)
     {
-        $id = $request['product_id'];
-        $this->ProductService->destroy($id);
-        return redirect('/backend');
+        
+        Product::destroy($productId); 
     }
+ 
 }
