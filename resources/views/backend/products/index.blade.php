@@ -18,9 +18,9 @@
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="修改" name="product_id">
                     </form>
-                    <form action="/backend/stores/{{$list->store_id}}/products/product_delete" method="get">
+                    <form action="/backend/stores/{{$list->store_id}}/products" method="get">
                         <input type="hidden" value="{{$list->id}}" name="product_id">
-                        <input type="submit" value="刪除" name="product_id">
+                        <input type="submit" value="詳細" name="product_id">
                     </form>
 
                     <div class="panel-body">
