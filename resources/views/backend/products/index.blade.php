@@ -24,7 +24,7 @@
                         <input type="submit" value="刪除">
                     </form>
 
-                   {!! Form::open(['method' => 'DELETE','route' => ['stores.destroy', $list->id]]) !!}
+                   {!! Form::open(['method' => 'DELETE','route' => ['products.destroy', $list->id]]) !!}
                     <button type="submit" class="btn btn-orange-2"><i class="glyphicon glyphicon-trash"></i> 刪除</button>
                     {!! Form::close() !!}　
 
