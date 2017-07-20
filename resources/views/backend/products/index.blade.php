@@ -24,6 +24,10 @@
                         <input type="submit" value="刪除">
                     </form>
 
+                   {!! Form::open(['method' => 'DELETE','route' => ['stores.destroy', $list->id]]) !!}
+                    <button type="submit" class="btn btn-orange-2"><i class="glyphicon glyphicon-trash"></i> 刪除</button>
+                    {!! Form::close() !!}　
+
 
                     <div class="panel-body">
                         <img src="{{ $list->cover }}" width="150px" height="150px">
