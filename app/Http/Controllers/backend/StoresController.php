@@ -73,6 +73,6 @@ class StoresController extends Controller
     }
     public function delete(Request $request)
     {
-        dd($request['id']);
+        dd($request['product_id']);
     }
 }

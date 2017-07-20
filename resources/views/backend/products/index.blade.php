@@ -20,7 +20,7 @@
                     </form>
                     <form action="/stores/{{$list->store_id}}/products" method="DELETE">
                         <input type="hidden" value="{{$list->id}}" name="product_id">
-                        <input type="submit" value="刪除" name="product_id">
+                        <input type="submit" value="刪除">
                     </form>
 
                     <div class="panel-body">
