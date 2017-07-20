@@ -8,6 +8,7 @@ Route::group(['prefix' => 'backend'], function()
 		Route::post('/edit-upload', 'backend\ImagesController@uploadFile');
 		Route::resource('stores', 'backend\StoresController');
 		Route::resource('/stores/{store_id}/products', 'backend\ProductsController');
+		Route::get('/stores/{store_id}/products/product_delete','backend\StoresController@delete');
 	});
 }); 
 

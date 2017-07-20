@@ -71,4 +71,8 @@ class StoresController extends Controller
             }
         }
     }
+    public function delete(Request $request)
+    {
+        dd($request['id']);
+    }
 }
