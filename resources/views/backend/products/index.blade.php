@@ -18,15 +18,11 @@
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="修改" name="product_id">
                     </form>
-                    <form action="/backend/stores/{{$list->store_id}}/products/{{$list->id}}/destroy" method="post">
-                        {{ csrf_field() }}
-                        <input type="hidden" value="{{$list->id}}" name="product_id">
-                        <input type="submit" value="刪除">
-                    </form>
+                    {!! Form::open(array('action' => array('backend\ProductsController@destroy', $request->store_id , $list->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
 
-                   {!! Form::open(['method' => 'DELETE','route' => ['/backend/stores/{{$list->store_id}}/products/', $list->id]]) !!}
-                    <button type="submit" class="btn btn-orange-2"><i class="glyphicon glyphicon-trash"></i> 刪除</button>
-                    {!! Form::close() !!}　
+                    {{ Form::button('dd', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
+
+                    {!! Form::close() !!}
 
 
                     <div class="panel-body">
