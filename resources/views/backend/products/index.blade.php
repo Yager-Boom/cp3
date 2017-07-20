@@ -18,7 +18,7 @@
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="修改" name="product_id">
                     </form>
-                    <form action="/backend/stores/{{$list->store_id}}/products/{{$list->id}}" method="delete">
+                    <form action="/backend/stores/{{$list->store_id}}/products/{{$list->id}}" method="post">
                         {{ csrf_field() }}
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="刪除">
