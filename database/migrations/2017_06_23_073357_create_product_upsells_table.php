@@ -15,6 +15,8 @@ class CreateProductUpsellsTable extends Migration
     {
         Schema::create('product_upsells', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('product_id');
+            $table->integer('upsell_id');
             $table->timestamps();
         });
     }
