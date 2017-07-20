@@ -78,6 +78,7 @@ class ProductsController extends Controller
     public function destroy(Request $request)
     {
         $id = $request['product_id'];
-        dd($id);
+        $this->ProductService->destroy($id);
+        return redirect('/backend');
     }
 }

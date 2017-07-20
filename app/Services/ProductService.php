@@ -16,4 +16,11 @@ class ProductService
 
 		return $result;
 	}
+
+	public function destroy($id)//產品ID
+    {
+        \DB::table('products')
+            ->where('id',$id)
+            ->delete();
+    }
 }
