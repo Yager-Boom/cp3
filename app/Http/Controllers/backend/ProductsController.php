@@ -74,5 +74,9 @@ class ProductsController extends Controller
                 return redirect('/backend');
             }
         }		
-	}	
+	}
+    public function destroy(Request $request)
+    {
+        dd($request['product_id']);
+    }
 }

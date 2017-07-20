@@ -71,8 +71,4 @@ class StoresController extends Controller
             }
         }
     }
-    public function destroy(Request $request)
-    {
-        dd($request['product_id']);
-    }
 }
