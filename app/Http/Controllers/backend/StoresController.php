@@ -73,6 +73,6 @@ class StoresController extends Controller
     }
     public function destroy(Request $request)
     {
-        dd(132);
+        dd($request['product_id']);
     }
 }
