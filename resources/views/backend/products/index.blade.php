@@ -10,7 +10,7 @@
                 <div class="panel panel-default">
                     {!! Form::open(array('action' => array('backend\ProductsController@destroy', $request->store_id , $list->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
 
-                    {{ Form::button('dd', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
+                    {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
 
                     {!! Form::close() !!}
                     <div class="panel-heading">
