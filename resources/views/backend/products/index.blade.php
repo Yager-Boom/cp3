@@ -13,12 +13,12 @@
                         商品名稱->{{ $list->title}}
                     </div>
 
-                    <form action="/backend/stores/{{$list->store_id}}/products/product_edit" method="post">
+                    <form action="#" method="post">
                         {{ csrf_field() }}
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="修改" name="product_id">
                     </form>
-                    <form action="/backend/stores/{{$list->store_id}}/products/product_delete" method="get">
+                    <form action="/products/{{$list->id}}" method="destroy">
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="刪除" name="product_id">
                     </form>
