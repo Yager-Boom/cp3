@@ -23,7 +23,7 @@
                         {{--<input type="submit" value="刪除">--}}
                     {{--</form>--}}
 
-                    {{ Form::open(array('action' => array('Backend\ProductsController@destroy', $page->id , $product->id, $price->id), 'class' => 'form-inline', 'method' => 'delete')) }}
+                    {{ Form::open(array('action' => array('Backend\ProductsController@destroy','method' => 'delete'))) }}
 
 
                     {{ Form::close() }}
