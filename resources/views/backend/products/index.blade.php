@@ -18,7 +18,7 @@
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="修改" name="product_id">
                     </form>
-                    <form action="/stores/{{$list->store_id}}/products/{{$list->id}}" method="DELETE">
+                    <form action="/stores/{{$list->store_id}}/products" method="DELETE">
                         <input type="hidden" value="{{$list->id}}" name="product_id">
                         <input type="submit" value="刪除" name="product_id">
                     </form>
