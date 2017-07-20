@@ -11,7 +11,7 @@
                     {!! Form::open(array('action' => array('backend\ProductsController@destroy', $request->store_id , $list->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
 
                     {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
-
+123
                     {!! Form::close() !!}
                     <div class="panel-heading">
                         商品名稱->{{ $list->title}}
