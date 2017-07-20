@@ -77,6 +77,6 @@ class ProductsController extends Controller
 	}
     public function destroy(Request $request)
     {
-        dd($request['product_id']);
+        $id = $request['product_id'];
     }
 }

@@ -13,15 +13,20 @@
                         商品名稱->{{ $list->title}}
                     </div>
 
-                    <form action="#" method="post">
-                        {{ csrf_field() }}
-                        <input type="hidden" value="{{$list->id}}" name="product_id">
-                        <input type="submit" value="修改" name="product_id">
-                    </form>
-                    <form action="/backend/stores/{{$list->store_id}}/products/{{$list->id}}" method="DELETE">
+                    {{--<form action="#" method="post">--}}
+                        {{--{{ csrf_field() }}--}}
                         {{--<input type="hidden" value="{{$list->id}}" name="product_id">--}}
-                        <input type="submit" value="刪除">
-                    </form>
+                        {{--<input type="submit" value="修改" name="product_id">--}}
+                    {{--</form>--}}
+                    {{--<form action="/backend/stores/{{$list->store_id}}/products/{{$list->id}}" method="delete">--}}
+                        {{--<input type="hidden" value="{{$list->id}}" name="product_id">--}}
+                        {{--<input type="submit" value="刪除">--}}
+                    {{--</form>--}}
+
+                    {{ Form::open(array('action' => array('Backend\ProductsController@destroy', $page->id , $product->id, $price->id), 'class' => 'form-inline', 'method' => 'delete')) }}
+
+
+                    {{ Form::close() }}
 
                     <div class="panel-body">
                         <img src="{{ $list->cover }}" width="150px" height="150px">
