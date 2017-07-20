@@ -13,9 +13,16 @@
                         商品名稱->{{ $list->title}}
                     </div>
 
-                    <div>
-                        <input type="submit" value="{{$list->id}}" name="product_id">
-                    </div>
+                    <form action="#" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" value="{{$list->id}}" name="product_id">
+                        <input type="submit" value="修改" name="product_id">
+                    </form>
+                    <form action="#" method="post">
+                        {{ csrf_field() }}
+                        <input type="hidden" value="{{$list->id}}" name="product_id">
+                        <input type="submit" value="刪除" name="product_id">
+                    </form>
 
                     <div class="panel-body">
                         <img src="{{ $list->cover }}" width="150px" height="150px">
