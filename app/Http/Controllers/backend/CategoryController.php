@@ -10,6 +10,6 @@ use App\Services\ImgService;
 class CategoryController extends Controller
 {
     function index(){
-        dd(55688);
+        return view('backend.categorys.index');
     }
 }
