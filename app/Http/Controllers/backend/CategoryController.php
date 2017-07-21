@@ -12,4 +12,9 @@ class CategoryController extends Controller
     function index(){
         return view('backend.categorys.index');
     }
+
+    public function create()
+    {
+        return view('backend.categorys.create');
+    }
 }
