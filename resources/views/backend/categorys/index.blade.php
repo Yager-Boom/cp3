@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="/backend/category/create">Create</a>
+                <a href="/backend/store/{{$store_id}}/category/create">Create</a>
                 <div class="panel-heading">
                     目錄名稱
                 </div>

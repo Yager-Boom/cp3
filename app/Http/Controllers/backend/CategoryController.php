@@ -9,14 +9,15 @@ use App\Services\ImgService;
 
 class CategoryController extends Controller
 {
-    function index(){
-        return view('backend.categorys.index');
+    function index()
+    {
+        $store_id = 1;
+        return view('backend.categorys.index',compact($store_id));
     }
 
     public function create()
     {
-        $aaa = 123;
-        return view('backend.categorys.create',compact('aaa'));
+        return view('backend.categorys.create');
     }
 
     public function store(Request $request)
