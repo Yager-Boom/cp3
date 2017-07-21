@@ -17,4 +17,9 @@ class CategoryController extends Controller
     {
         return view('backend.categorys.create');
     }
+
+    public function store(Request $request)
+    {
+        dd($request);
+    }
 }
