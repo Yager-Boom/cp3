@@ -10,7 +10,7 @@
             @if($stores != '')
                 @foreach($stores as $list)
                 <div class="panel panel-default">
-                <a href="{{ url('backend/stores', ['link' => $list->id])}}"class="btn btn-info pull-right">Enter</a>
+                <a href="{{ url('backend/stores', ['link' => $list->id])}}" class="btn btn-info pull-right">Enter</a>
                     <div class="panel-heading">
                         Domain->{{ $list->domain}}
                     </div>
