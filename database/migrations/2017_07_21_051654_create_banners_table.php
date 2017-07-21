@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductUpsellsTable extends Migration
+class CreateBannersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateProductUpsellsTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_upsells', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id');
-            $table->integer('upsell_id');
+            $table->integer('store_id');
+            $table->string('name');
+            $table->string('img');
+            $table->integer('sort');
+            $table->integer('target');
+            $table->integer('status')->default('1');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateProductUpsellsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_upsells');
+        Schema::dropIfExists('banners');
     }
 }
