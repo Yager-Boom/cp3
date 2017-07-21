@@ -2,7 +2,6 @@
 
 @section('content')
 	<a href="/backend/stores/{{ $store->id }}/category" class="btn btn-info pull-right">目錄頁</a>
-	<a href="#" class="btn btn-info pull-right">店家頁</a>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
