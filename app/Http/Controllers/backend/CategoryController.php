@@ -21,5 +21,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         dd($request);
+        $id = $request['id'];
     }
 }
