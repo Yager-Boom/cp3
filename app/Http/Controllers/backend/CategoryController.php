@@ -12,7 +12,7 @@ class CategoryController extends Controller
     function index()
     {
         $store_id = 1;
-        return view('backend.categorys.index',compact($store_id));
+        return view('backend.categorys.index',compact('store_id'));
     }
 
     public function create()
