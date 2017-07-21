@@ -15,6 +15,14 @@ class CreateStorePluginsTable extends Migration
     {
         Schema::create('store_plugins', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('store_id');
+            $table->string('type');
+            $table->string('title');
+            $table->string('code');
+            $table->string('key');
+            $table->text('value');
+            $table->text('etc');
+            $table->string('status');
             $table->timestamps();
         });
     }
