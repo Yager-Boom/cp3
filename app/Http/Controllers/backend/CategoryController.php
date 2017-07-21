@@ -15,7 +15,8 @@ class CategoryController extends Controller
 
     public function create()
     {
-        return view('backend.categorys.create');
+        $aaa = 123;
+        return view('backend.categorys.create',compact('aaa'));
     }
 
     public function store(Request $request)
