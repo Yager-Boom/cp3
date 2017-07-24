@@ -27,7 +27,6 @@ class CategoryController extends Controller
     public function create(Request $request)
     {
         $stores = Store::find($request->store_id);
-        dd($stores);
         return view('backend.categorys.create',compact('stores'));
     }
 
