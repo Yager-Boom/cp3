@@ -10,7 +10,9 @@
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
+                            <br>
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
+                            <br>
                             <a href="/backend/stores/{{$detail->id}}/category/delete">Delete</a>
                         </div>
                         <div class="panel-body">
