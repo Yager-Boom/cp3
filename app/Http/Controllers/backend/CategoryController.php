@@ -32,6 +32,25 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        dd(123);
+        try
+        {
+            $now = date("Y/m/d H:i");
+            \DB::table('navs')
+               ->insert([
+                'store_id' => $request['store_id'],
+                'link' => $request['link'],
+                'position' => $request['position'],
+                'nitem' => $request['nitem'],
+                'sort' => $request['sort'],
+                'created_at' => $request['created_at']
+            ]);
+        }
+        catch (\Exception $e)
+        {
+            $errorCode = $e->errorInfo[1];
+            if ($errorCode == 1062) {
+                return redirect('/backend');
+            }
+        }
     }
 }
