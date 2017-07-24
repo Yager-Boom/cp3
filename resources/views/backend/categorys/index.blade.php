@@ -10,13 +10,16 @@
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
+                            <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
+                            <a href="/backend/stores/{{$detail->id}}/category/delete">Delete</a>
                         </div>
                         <div class="panel-body">
                             <ul>
                                 <li>名　　稱：{{$detail->domain}}</li>
                                 <li>
+                                    連　　結：
                                     <a href="{{$detail->link}}">
-                                        連　　結：{{$detail->link}}
+                                        {{$detail->link}}
                                     </a>
                                 </li>
                                 <li>位　　址：{{$detail->position}}</li>
