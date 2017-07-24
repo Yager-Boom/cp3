@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($stores as $store)
-                    <a href="/backend/stores/{{$store->id}}/category/create">Create...{{$store->domain}}</a>
+                    <a href="/backend/stores/{{$store->id}}/category/create">Create...商店網址{{$store->domain}}</a>
                     <div class="panel-heading">
                         目錄名稱
                     </div>
