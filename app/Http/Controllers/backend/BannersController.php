@@ -79,6 +79,7 @@ class BannersController extends Controller
     public function setting(Request $request, $store_id)
     {
         $banner = Banner::find($_SERVER['QUERY_STRING']);
+        $banner->name = $request->name;
         $banner->sort = $request->sort;
         $banner->target = $request->target;
         $banner->status = $request->status;
