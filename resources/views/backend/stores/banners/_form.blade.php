@@ -14,12 +14,9 @@
             圖片 {{ Form::file('img') }} 
         </div>
         <div class="form-group">
-            <textarea class="form-control" id="summernote" name="content"></textarea>
-        </div>
-        <div class="form-group">
             {{ Form::hidden('tmpPath', $randStr , ['class' => 'form-control tmpPath']) }}
         </div> 
-        {{ Form::submit('建立', array('class' => 'btn btn-success pull-right')) }}
-        <a href="/backend">上一頁</a>
+        <a href="/backend/stores/{{ $store->id }}/banners">上一頁</a>        
+        {{ Form::submit('建立', array('class' => 'btn btn-success')) }}
     </div>
 </div>

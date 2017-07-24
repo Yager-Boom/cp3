@@ -57,7 +57,7 @@
 </div>
 
 <script type="text/javascript">
-	if($('.coverflow .carousel-inner div.item').length === 1) 
+	if($('.coverflow .carousel-inner div.item').length < 2) 
 	{ 
 		$('.carousel-indicators, .carousel-control').hide();
 	}

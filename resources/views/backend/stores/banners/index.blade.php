@@ -24,7 +24,9 @@
                         </div>
 
                         <div class="panel-body">
-                            <a href="/backend/stores/{{ $request->store_id }}/banners/{{ $list->id }}"><img src="{{ $list->img }}" width="150px" height="150px"></a>
+                            <a href="/backend/stores/{{ $request->store_id }}/banners/{{ $list->id }}">
+                                <img src="{{ $list->img }}" width="150px" height="150px">
+                            </a>
                         </div>
                     </div>
                     @endforeach

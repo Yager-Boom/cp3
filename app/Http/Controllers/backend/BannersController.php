@@ -75,7 +75,7 @@ class BannersController extends Controller
         }
 	}
 
-    public function setting(Request $request, $store_id, $banner_id)
+    public function update(Request $request, $store_id, $banner_id)
     {
         $banner = Banner::find($banner_id);
         $banner->sort = $request->sort;
@@ -84,5 +84,13 @@ class BannersController extends Controller
         $banner->update();
 
         return redirect('/backend/stores/'.$store_id.'/banners');
+    }
+
+    public function destroy($store_id, $banner_id)
+    {
+        $banner = Banner::find($banner_id);
+        $banner->delete();
+
+        return view('/backend/stores/'.$store_id.'/banners');
     }
 }
