@@ -40,7 +40,10 @@ class StoreRepository
             foreach ($ids as $value ) {
                 $queryStr[] = $value->store_id;
             }
-            $result = DB::table('stores')->select('*')->whereIn('id', $queryStr)->get();
+            $result = DB::table('stores')
+                        ->select('*')
+                        ->whereIn('id', $queryStr)
+                        ->get();
         }
 
         return $result;
