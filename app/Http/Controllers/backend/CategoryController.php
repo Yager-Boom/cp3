@@ -7,6 +7,7 @@ use App\Http\Controllers\BackendController as Controller;
 use App\Services\StoreService;
 use App\Services\ImgService;
 
+use App\Store;
 
 class CategoryController extends Controller
 {
