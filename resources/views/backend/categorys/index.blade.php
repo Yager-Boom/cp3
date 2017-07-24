@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="/backend/stores/{{$stores->idKKK}}/category/create">Create</a>
+                <a href="/backend/stores/{{$stores->id}}/category/create">Create</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址{{$detail->domain}}
