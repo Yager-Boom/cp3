@@ -25,6 +25,6 @@ class CategoryController extends Controller
     {
         $user = $this->user();
         $id = $user->id;
-        dd($request,$id);
+        dd($id);
     }
 }
