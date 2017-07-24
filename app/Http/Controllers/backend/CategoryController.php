@@ -34,7 +34,7 @@ class CategoryController extends Controller
     {
         try
         {
-            $now = date("Y/m/d H:i");
+            $now = date("Y/m/d H:i ");
             \DB::table('navs')
                ->insert([
                 'store_id' => $request['store_id'],
