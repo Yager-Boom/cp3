@@ -24,9 +24,10 @@ class CategoryController extends Controller
         $uid=$this->User()->id;
         $details = \DB::table('user_stores')
                       ->join('navs','navs.store_id', 'user_stores.store_id')
+                      ->join('stores','stores.id', 'navs.store_id')
                       ->where('user_stores.user_id',$uid)
                       ->get();
-        dd($stores);
+        dd($details);
         return view('backend.categorys.index',compact('stores','details'));
     }
 
