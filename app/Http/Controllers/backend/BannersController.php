@@ -27,13 +27,6 @@ class BannersController extends Controller
 		return view('backend.stores.banners.index', compact('banners', 'request'));
 	}
 
-    public function show(Request $request, $store_id, $banner_id)
-    {
-        $banner = Banner::find($banner_id);
-
-        return view('backend.stores.banners.show', compact('store_id', 'banner'));
-    }
-
 	public function create(Request $request)
 	{
 		$store = Store::find($request->store_id);
@@ -75,22 +68,22 @@ class BannersController extends Controller
         }
 	}
 
-    public function update(Request $request, $store_id, $banner_id)
+    public function destroy($store_id, $banner_id)
     {
         $banner = Banner::find($banner_id);
+        $banner->delete();
+
+        return redirect('/backend/stores/'.$store_id.'/banners');
+    }
+
+    public function setting(Request $request, $store_id)
+    {
+        $banner = Banner::find($_SERVER['QUERY_STRING']);
         $banner->sort = $request->sort;
         $banner->target = $request->target;
         $banner->status = $request->status;
         $banner->update();
 
         return redirect('/backend/stores/'.$store_id.'/banners');
-    }
-
-    public function destroy($store_id, $banner_id)
-    {
-        $banner = Banner::find($banner_id);
-        $banner->delete();
-
-        return view('/backend/stores/'.$store_id.'/banners');
     }
 }

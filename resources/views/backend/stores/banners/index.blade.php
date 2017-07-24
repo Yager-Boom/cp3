@@ -22,11 +22,23 @@
                         <div class="panel-heading">
                             橫幅名稱->{{ $list->name }}
                         </div>
+                        <div class="panel-body pull-right">
+                            {!! Form::open(array('action' => array('backend\BannersController@setting', $request->store_id, $list->id),'method' => 'post')) !!}
+                            <h4 style="text-align: center;">設定</h4>
+                            {!! Form::text('name', $list->name, ['class' => 'form-control', 'placeholder' => $list->name]) !!}
+                            {!! Form::selectRange('sort', 1, 5, ['class' => 'form-control', 'placeholder' => $list->sort]) !!}
+
+                            {!! Form::select('target', array('0' => '主頁面', '1' => '商品頁') , ['class' => 'form-control', 'placeholder' => $list->target]) !!}
+                            {!! Form::select('status', array('0' => '關閉', '1' => '開啟') , ['class' => 'form-control', 'placeholder' => $list->status]) !!}
+                            {!! Form::submit('確定', ['class' => 'form-control']) !!}
+                            {!! Form::close() !!}
+                            {!! Form::open(array('action' => array('backend\BannersController@destroy', $request->store_id, $list->id),'method' => 'delete')) !!}
+                            {!! Form::submit('刪除', ['class' => 'form-control']) !!}
+                            {!! Form::close() !!}
+                        </div>
 
                         <div class="panel-body">
-                            <a href="/backend/stores/{{ $request->store_id }}/banners/{{ $list->id }}">
-                                <img src="{{ $list->img }}" width="150px" height="150px">
-                            </a>
+                            <img src="{{ $list->img }}" width="150px" height="150px">
                         </div>
                     </div>
                     @endforeach
