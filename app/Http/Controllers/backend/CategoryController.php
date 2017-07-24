@@ -26,6 +26,8 @@ class CategoryController extends Controller
     public function create()
     {
         $stores = $this->storeService->getLists($this->User()->id);
+        $stores_id = $stores->id;
+        dd($stores_id);
         return view('backend.categorys.create',compact('stores'));
     }
 
