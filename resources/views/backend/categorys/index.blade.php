@@ -12,7 +12,7 @@
                         </div>
                         <div class="panel-body">
                             <ul>
-                                <li>{{$detail->domail}}</li>
+                                <li>{{$detail->domain}}</li>
                                 <li>{{$detail->link}}</li>
                                 <li>{{$detail->position}}</li>
                                 <li>{{$detail->nitem}}</li>
