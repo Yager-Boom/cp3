@@ -5,14 +5,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="/backend/stores/{{$store->id}}/category/create">Create</a>
-                <div class="panel-heading">
-                    目錄名稱
-                </div>
+                @foreach($stores as $store)
+                    <a href="/backend/stores/{{$store->id}}/category/create">Create...{{$store->domain}}</a>
+                    <div class="panel-heading">
+                        目錄名稱
+                    </div>
 
-                <div class="panel-body">
-                    名稱名稱名稱...
-                </div>
+                    <div class="panel-body">
+                        名稱名稱名稱...
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
