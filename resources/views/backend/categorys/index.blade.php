@@ -6,31 +6,18 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($details as $detail)
-                    <div class="panel-heading">
-                        <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
-                    </div>
-                    <div class="panel-body">
-                        <table>
-                            <thead>
-                            head.......
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>123</th>
-                                    <th>123</th>
-                                    <th>123</th>
-                                    <th>123</th>
-                                    <th>123</th>
-                                </tr>
-                                <tr>
-                                    <td>456</td>
-                                    <td>456</td>
-                                    <td>456</td>
-                                    <td>456</td>
-                                    <td>456</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div style="border: 5px;">
+                        <div class="panel-heading">
+                            <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>{{$detail->domail}}</li>
+                                <li>{{$detail->link}}</li>
+                                <li>{{$detail->position}}</li>
+                                <li>{{$detail->nitem}}</li>
+                            </ul>
+                        </div>
                     </div>
                 @endforeach
             </div>
