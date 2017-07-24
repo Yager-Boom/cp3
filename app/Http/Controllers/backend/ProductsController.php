@@ -28,7 +28,7 @@ class ProductsController extends Controller
 	public function show(Request $request)
 	{
 		$product = Product::find(1);
-
+        
 		return view('backend.products.show', compact('product'));
 	}
 
@@ -36,7 +36,7 @@ class ProductsController extends Controller
     {
 		
 		$store = Store::find($request->store_id);
-		$randStr =$this->getRadomStr();
+		$randStr = $this->getRadomStr();
         
         return view('backend.products.create', compact('randStr', 'store'));
 	}
