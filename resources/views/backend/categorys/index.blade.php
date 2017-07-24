@@ -11,11 +11,11 @@
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
                                 <br>
-                            {!! Form::open(array('action' => array('backend\CategoryController@edit', $request->store_id , $list->id), 'class' => 'form-inline', 'method' => 'edit')) !!}
+                            {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id), 'class' => 'form-inline', 'method' => 'edit')) !!}
                                 {{ Form::button('修改', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '修改'] )  }}
                             {!! Form::close() !!}
                                 <br>
-                            {!! Form::open(array('action' => array('backend\CategoryController@destroy', $request->store_id , $list->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
+                            {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
                                 {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
                             {!! Form::close() !!}
                         </div>
