@@ -10,7 +10,27 @@
                         <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
                     </div>
                     <div class="panel-body">
-                        名稱名稱名稱...
+                        <table>
+                            <thead>
+                            head.......
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>123</th>
+                                    <th>123</th>
+                                    <th>123</th>
+                                    <th>123</th>
+                                    <th>123</th>
+                                </tr>
+                                <tr>
+                                    <td>456</td>
+                                    <td>456</td>
+                                    <td>456</td>
+                                    <td>456</td>
+                                    <td>456</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 @endforeach
             </div>
