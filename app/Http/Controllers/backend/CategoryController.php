@@ -23,8 +23,6 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $user = $this->user();
-        $id = $user->id;
-        dd($id);
+        dd(123);
     }
 }
