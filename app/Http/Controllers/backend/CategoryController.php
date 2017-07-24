@@ -18,7 +18,6 @@ class CategoryController extends Controller
 
     public function create()
     {
-        dd(1234567890);
         return view('backend.categorys.create');
     }
 
