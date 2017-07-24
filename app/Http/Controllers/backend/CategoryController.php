@@ -19,15 +19,14 @@ class CategoryController extends Controller
 
     function index()
     {
-        $store = $this->storeService->getLists($this->User()->id);
-        dd($store);
-        return view('backend.categorys.index',compact('store'));
+        $stores = $this->storeService->getLists($this->User()->id);
+        return view('backend.categorys.index',compact('stores'));
     }
 
     public function create()
     {
-        $store = $this->storeService->getLists($this->User()->id);
-        return view('backend.categorys.create',compact('store'));
+        $stores = $this->storeService->getLists($this->User()->id);
+        return view('backend.categorys.create',compact('stores'));
     }
 
     public function store(Request $request)
