@@ -23,11 +23,10 @@ class CategoryController extends Controller
         return view('backend.categorys.index',compact('stores'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        $stores = $this->storeService->getLists($this->User()->id);
-        $stores_id = $stores->id;
-        dd($stores_id);
+        $stores = Store::find($request->store_id);
+        dd($stores);
         return view('backend.categorys.create',compact('stores'));
     }
 
