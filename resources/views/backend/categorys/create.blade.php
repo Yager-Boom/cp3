@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {!! Form::open(array('action' => array('backend\CategoryController@store'), 'files'=>true)) !!}
+            {!! Form::open(array('action' => array('backend\CategoryController@store'))) !!}
             @include('backend/categorys/_form')
             {!! Form::close() !!}
         </div>
