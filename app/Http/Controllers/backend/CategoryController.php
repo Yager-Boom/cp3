@@ -11,12 +11,14 @@ class CategoryController extends Controller
 {
     function index()
     {
+        $user = $this->user();
         $store_id = 1;
         return view('backend.categorys.index',compact('store_id'));
     }
 
     public function create()
     {
+        dd(1234567890);
         return view('backend.categorys.create');
     }
 
