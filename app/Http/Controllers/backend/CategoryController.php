@@ -11,14 +11,16 @@ class CategoryController extends Controller
 {
     function index()
     {
-        $user = $this->user();
-        $store_id = 1;
+        $stores = $this->storeService->getLists($this->User()->id);
+        $store_id = $stores->id;
         return view('backend.categorys.index',compact('store_id'));
     }
 
     public function create()
     {
-        return view('backend.categorys.create');
+        $stores = $this->storeService->getLists($this->User()->id);
+        $store_id = $stores->id;
+        return view('backend.categorys.create',compact('store_id'));
     }
 
     public function store(Request $request)
