@@ -5,7 +5,8 @@
         </div>
 
         <div class="form-group">
-            {{ Form::text('store_id', null , ['class' => 'form-control', 'placeholder' => '$stores->id']) }}
+            {{ Form::text('store_id', null , ['class' => 'form-control']) }}
+            {{$stores->id}}
         </div>
         <div class="form-group">
             {{ Form::text('link', null , ['class' => 'form-control', 'placeholder' => 'link']) }}
