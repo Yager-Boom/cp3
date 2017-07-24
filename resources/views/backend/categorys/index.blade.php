@@ -7,15 +7,20 @@
             <div class="col-md-12">
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
+                        商店網址{{$detail->domain}}
                         <div class="panel-heading">
-                            <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
+                            <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
                         </div>
                         <div class="panel-body">
                             <ul>
-                                <li>{{$detail->domain}}</li>
-                                <li>{{$detail->link}}</li>
-                                <li>{{$detail->position}}</li>
-                                <li>{{$detail->nitem}}</li>
+                                <li>名　　稱：{{$detail->domain}}</li>
+                                <li>
+                                    <a href="{{$detail->link}}">
+                                        連　　結：{{$detail->link}}
+                                    </a>
+                                </li>
+                                <li>位　　址：{{$detail->position}}</li>
+                                <li>分　　類：{{$detail->nitem}}</li>
                             </ul>
                         </div>
                     </div>
