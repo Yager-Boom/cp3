@@ -6,11 +6,9 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($details as $detail)
-                    <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
                     <div class="panel-heading">
-                        目錄名稱
+                        <a href="/backend/stores/{{$detail->id}}/category/create">Create...商店網址{{$detail->domain}}</a>
                     </div>
-
                     <div class="panel-body">
                         名稱名稱名稱...
                     </div>
