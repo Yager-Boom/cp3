@@ -9,10 +9,8 @@
             <div class="col-md-12">
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
-                        商店網址:{{$detail->domain}}
+                        商店名稱:{{$detail->domain}}
                         <div class="panel-heading">
-                            <a href="/backend/stores/{{$detail->usid}}/category/create">Create</a>
-
                             {!! Form::open(array('action' => array('backend\CategoryController@create', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'get')) !!}
                                 {{ Form::button('新增', ['type' => 'submit', 'class' => 'btn btn-success',  'title' => '新增'] )  }}
                             {!! Form::close() !!}
