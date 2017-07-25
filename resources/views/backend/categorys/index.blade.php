@@ -9,10 +9,10 @@
             <div class="col-md-12">
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
-                        商店網址{{$detail->domain}}
+                        商店網址:{{$detail->domain}}
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
-                            @if($detail!='')
+                            @if(isset($detail))
                                     <br>
                                 <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                     <br>
