@@ -66,7 +66,7 @@ class CategoryController extends Controller
         $edit_navs = \DB::table('navs')
                         ->where('id',$nid)
                         ->get();
-        $edit_navs = $edit_navs[0]->id;
+//        $edit_navs = $edit_navs[0]->id;
         return view('backend.categorys.edit',compact('edit_navs'));
     }
 
