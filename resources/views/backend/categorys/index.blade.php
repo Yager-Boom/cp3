@@ -12,7 +12,7 @@
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
-                            @if(isset($detail))
+                            @if($detail!='')
                                     <br>
                                 <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                     <br>
