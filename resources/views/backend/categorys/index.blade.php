@@ -12,6 +12,7 @@
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
+                            @if(isset($detail))
                                 <br>
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
@@ -33,6 +34,7 @@
                                 <li>分　　類：{{$detail->nitem}}</li>
                             </ul>
                         </div>
+                        @endif
                     </div>
                 @endforeach
             </div>
