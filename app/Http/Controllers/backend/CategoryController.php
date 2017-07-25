@@ -62,13 +62,9 @@ class CategoryController extends Controller
 
     public function edit(Request $request)
     {
-        dd($request, $request->store_id, $request->category);
-        $nid = $request['nid'];
-        $edit_category = \DB::table('navs')
-                        ->where('id',$nid)
-                        ->get();
-        $edit_category = $edit_category[0]->id;
-        return view('backend.categorys.edit',compact('edit_category','stores'));
+        $store_id = $request->store_id;
+        $category = $request->category;
+        return view('backend.categorys.edit',compact('category','store_id'));
     }
 
     public function update()
