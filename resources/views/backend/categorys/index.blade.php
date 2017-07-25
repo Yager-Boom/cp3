@@ -6,7 +6,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">{{$stores->id}}
+            <div class="col-md-12">{{dd($stores->id)}}
                 <a href="/backend/stores//category/create">Create</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
