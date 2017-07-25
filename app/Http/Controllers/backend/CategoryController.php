@@ -63,6 +63,6 @@ class CategoryController extends Controller
     }
     public function destroy(Request $request)
     {
-        dd(123);
+        dd($request['nid']);
     }
 }

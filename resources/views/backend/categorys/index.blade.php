@@ -2,9 +2,11 @@
 
 @section('content')
     <div class="container">
+        <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址{{$detail->domain}}
