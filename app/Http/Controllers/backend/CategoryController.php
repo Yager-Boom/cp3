@@ -23,6 +23,7 @@ class CategoryController extends Controller
     function index()
     {
         $stores = $this->storeService->getLists($this->User()->id);
+        dd($stores);
         $uid=$this->User()->id;
         $details = $this->categoryService->details($uid);
         return view('backend.categorys.index',compact('stores','details'));
