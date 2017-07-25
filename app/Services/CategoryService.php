@@ -12,13 +12,13 @@ class CategoryService
                    ->select('*','navs.id as nid', 'user_stores.store_id as usid')
                    ->leftjoin('navs','navs.store_id', 'user_stores.store_id')
                    ->leftjoin('stores','stores.id', 'navs.store_id')
-                   ->where('user_stores.user_id',$uid)
+                   ->where('user_stores.user_id', $uid)
                    ->get();
     }
     public function destroy($nid)
     {
         \DB::table('navs')
-            ->where('id',$nid)
-            ->delete();
+           ->where('id', $nid)
+           ->delete();
     }
 }
