@@ -8,7 +8,12 @@ Route::group(['prefix' => 'backend'], function()
 		Route::post('/edit-upload', 'backend\ImagesController@uploadFile');
 		Route::resource('stores', 'backend\StoresController');
 		Route::resource('/stores/{store_id}/products', 'backend\ProductsController');
+
 		Route::resource('/stores/{store_id}/category', 'backend\CategoryController');
+
+		Route::resource('/stores/{store_id}/banners', 'backend\BannersController');
+		Route::post('/stores/{store_id}/banners', 'backend\BannersController@setting');		
+
 	});
 }); 
 
