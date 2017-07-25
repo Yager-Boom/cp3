@@ -6,13 +6,14 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">{{dd($stores->id)}}
-                <a href="/backend/stores//category/create">Create</a>
+            <div class="col-md-12">
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址:{{$detail->domain}}
                         <div class="panel-heading">
+                            <a href="/backend/stores/{{$detail->usid}}/category/create">Create</a>
                             @if(isset($detail->id))
+                                    <br>
                                 {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'get')) !!}
                                     {{ Form::hidden('nid', $detail->nid ) }}
                                     {{ Form::button('修改', ['type' => 'submit', 'class' => 'btn btn-primary',  'title' => '修改'] )  }}
