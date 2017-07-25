@@ -43,14 +43,15 @@ class CategoryController extends Controller
         {
             $now = date("Y/m/d H:i ");
             \DB::table('navs')
-               ->insert([
+               ->insert
+               ([
                 'store_id' => $request['store_id'],
                 'link' => $request['link'],
                 'position' => $request['position'],
                 'nitem' => $request['nitem'],
                 'sort' => $request['sort'],
                 'created_at' => $now
-            ]);
+               ]);
             return redirect('/backend/stores/'.$request['store_id'].'/category');
         }
         catch (\Exception $e)
@@ -63,6 +64,9 @@ class CategoryController extends Controller
     }
     public function destroy(Request $request)
     {
-        dd($request['nid']);
+        \DB::table('navs')
+           ->where('id',$request['nid'])
+           ->delete();
+        return redirect('/backend');
     }
 }
