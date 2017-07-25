@@ -62,7 +62,7 @@ class CategoryController extends Controller
 
     public function edit(Request $request)
     {
-        $stores = $this->storeService->getLists($this->User()->id);
+        $stores = $this->storeService->getOne($this->User()->id);
         $nid = $request['nid'];
         $edit_category = \DB::table('navs')
                         ->where('id',$nid)
