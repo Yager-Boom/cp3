@@ -6,8 +6,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <a href="/backend/stores/{{$stores}}/category/create">Create</a>
+            <div class="col-md-12">{{$stores->id}}
+                <a href="/backend/stores//category/create">Create</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址:{{$detail->domain}}
