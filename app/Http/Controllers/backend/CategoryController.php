@@ -62,7 +62,7 @@ class CategoryController extends Controller
 
     public function edit(Request $request)
     {
-        $stores = Store::find($request->store_id);
+//        $stores = Store::find($request->store_id);
         $nid = $request['nid'];
         $edit_navs = \DB::table('navs')
                         ->where('id',$nid)
