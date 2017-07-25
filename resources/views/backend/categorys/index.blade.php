@@ -11,10 +11,10 @@
                     <div style="border-style:solid;">
                         商店網址:{{$detail->domain}}
                         <div class="panel-heading">
-                            <a href="/backend/stores/{{$detail->store_id}}/category/create">Create</a>
+                            <a href="/backend/stores/{{$detail->usid}}/category/create">Create</a>
                             @if(isset($detail->id))
                                     <br>
-                                <a href="/backend/stores/{{$detail->store_id}}/category/edit">Edit</a>
+                                <a href="/backend/stores/{{$detail->usid}}/category/edit">Edit</a>
                                     <br>
                                 {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
                                     {{ Form::hidden('nid', $detail->nid ) }}
