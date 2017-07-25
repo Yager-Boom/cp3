@@ -14,8 +14,6 @@
                             <a href="/backend/stores/{{$detail->usid}}/category/create">Create</a>
                             @if(isset($detail->id))
                                     <br>
-                                {{--<a href="/backend/stores/{{$detail->usid}}/category/edit">Edit</a>--}}
-
                                 {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'get')) !!}
                                     {{ Form::hidden('nid', $detail->nid ) }}
                                     {{ Form::button('修改', ['type' => 'submit', 'class' => 'btn btn-primary',  'title' => '修改'] )  }}
