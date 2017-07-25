@@ -67,9 +67,9 @@ class CategoryController extends Controller
         return view('backend.categorys.edit',compact('category','store_id'));
     }
 
-    public function update()
+    public function update(Request $request)
     {
-
+        dd('update');
     }
 
     public function destroy(Request $request)
