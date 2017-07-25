@@ -4,9 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {!! Form::open(array('action' => array('backend\CategoryController@update', 1))) !!}
-                @include('backend/categorys/_form')
-            {!! Form::close() !!}
+            edit-page
         </div>
     </div>
 </div>
