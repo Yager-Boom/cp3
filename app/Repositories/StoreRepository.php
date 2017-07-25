@@ -36,8 +36,10 @@ class StoreRepository
         if($ids->isEmpty()){
             $result ='';
         }
-        else{
-            foreach ($ids as $value ) {
+        else
+        {
+            foreach ($ids as $value )
+            {
                 $queryStr[] = $value->store_id;
             }
             $result = DB::table('stores')

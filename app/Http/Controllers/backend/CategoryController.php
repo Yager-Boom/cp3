@@ -6,27 +6,25 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\BackendController as Controller;
 use App\Services\StoreService;
 use App\Services\ImgService;
+use App\Services\CategoryService;
 
 use App\Store;
 
 class CategoryController extends Controller
 {
-    public function __construct(StoreService $storeService, ImgService $imgService)
+    public function __construct(StoreService $storeService, ImgService $imgService, CategoryService $categoryService)
     {
         $this->middleware('isStore');
         $this->storeService = $storeService;
         $this->imgService = $imgService;
+        $this->categoryService = $categoryService;
     }
 
     function index()
     {
         $stores = $this->storeService->getLists($this->User()->id);
         $uid=$this->User()->id;
-        $details = \DB::table('user_stores')
-                      ->join('navs','navs.store_id', 'user_stores.store_id')
-                      ->join('stores','stores.id', 'navs.store_id')
-                      ->where('user_stores.user_id',$uid)
-                      ->get();
+        $details = $this->categoryService->details($uid);
         return view('backend.categorys.index',compact('stores','details'));
     }
 
@@ -42,14 +40,15 @@ class CategoryController extends Controller
         {
             $now = date("Y/m/d H:i ");
             \DB::table('navs')
-               ->insert([
+               ->insert
+               ([
                 'store_id' => $request['store_id'],
                 'link' => $request['link'],
                 'position' => $request['position'],
                 'nitem' => $request['nitem'],
                 'sort' => $request['sort'],
                 'created_at' => $now
-            ]);
+               ]);
             return redirect('/backend/stores/'.$request['store_id'].'/category');
         }
         catch (\Exception $e)
@@ -59,5 +58,24 @@ class CategoryController extends Controller
                 return redirect('/backend');
             }
         }
+    }
+
+    public function edit(Request $request)
+    {
+        $store_id = $request->store_id;
+        $category = $request->category;
+        return view('backend.categorys.edit',compact('category','store_id'));
+    }
+
+    public function update(Request $request)
+    {
+        dd('update');
+    }
+
+    public function destroy(Request $request)
+    {
+        $nid = $request['nid'];
+        $this->categoryService->destroy($nid);
+        return redirect('/backend');
     }
 }
