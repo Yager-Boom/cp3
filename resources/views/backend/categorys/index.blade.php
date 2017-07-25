@@ -13,13 +13,14 @@
                         <div class="panel-heading">
                             <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
                             @if(isset($detail))
-                                <br>
-                            <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
-                                <br>
-                            {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
-                                {{ Form::hidden('nid', $detail->nid ) }}
-                                {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
-                            {!! Form::close() !!}
+                                    <br>
+                                <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
+                                    <br>
+                                {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
+                                    {{ Form::hidden('nid', $detail->nid ) }}
+                                    {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
+                                {!! Form::close() !!}
+                            @endif
                         </div>
                         <div class="panel-body">
                             <ul>
@@ -34,7 +35,6 @@
                                 <li>分　　類：{{$detail->nitem}}</li>
                             </ul>
                         </div>
-                        @endif
                     </div>
                 @endforeach
             </div>
