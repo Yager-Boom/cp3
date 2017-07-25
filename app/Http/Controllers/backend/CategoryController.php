@@ -72,7 +72,7 @@ class CategoryController extends Controller
 
     public function update()
     {
-        
+
     }
 
     public function destroy(Request $request)
