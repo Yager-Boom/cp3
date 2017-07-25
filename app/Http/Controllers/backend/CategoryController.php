@@ -67,7 +67,6 @@ class CategoryController extends Controller
                         ->where('id',$nid)
                         ->get();
         $edit_navs = $edit_navs[0]->id;
-        dd($edit_navs);
         return view('backend.categorys.edit',compact('edit_navs'));
     }
 
