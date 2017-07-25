@@ -20,20 +20,20 @@
                                     {{ Form::hidden('nid', $detail->nid ) }}
                                     {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
                                 {!! Form::close() !!}
+                                </div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>名　　稱：{{$detail->domain}}</li>
+                                        <li>
+                                            連　　結：
+                                            <a href="{{$detail->link}}">
+                                                {{$detail->link}}
+                                            </a>
+                                        </li>
+                                        <li>位　　址：{{$detail->position}}</li>
+                                        <li>分　　類：{{$detail->nitem}}</li>
+                                    </ul>
                             @endif
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li>名　　稱：{{$detail->domain}}</li>
-                                <li>
-                                    連　　結：
-                                    <a href="{{$detail->link}}">
-                                        {{$detail->link}}
-                                    </a>
-                                </li>
-                                <li>位　　址：{{$detail->position}}</li>
-                                <li>分　　類：{{$detail->nitem}}</li>
-                            </ul>
                         </div>
                     </div>
                 @endforeach
