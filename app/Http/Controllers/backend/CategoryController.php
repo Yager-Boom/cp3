@@ -21,7 +21,6 @@ class CategoryController extends Controller
     function index()
     {
         $stores = $this->storeService->getLists($this->User()->id);
-        dd($stores);
         $uid=$this->User()->id;
         $details = \DB::table('user_stores')
                       ->select('*','navs.id as nid')
