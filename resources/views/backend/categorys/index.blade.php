@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址{{$detail->domain}}
@@ -14,7 +14,7 @@
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
                             {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
-                                {{Form::hidden($detail->nid)}}
+                                {{ Form::hidden('nid', $detail->nid ) }}
                                 {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
                             {!! Form::close() !!}
                         </div>
