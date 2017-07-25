@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {!! Form::open(array('action' => array('backend\CategoryController@update',$stores->id,$edit_navs), 'method' => 'get')) !!}
-                123
+            {!! Form::open(array('action' => array('backend\CategoryController@update', $edit_navs))) !!}
+                @include('backend/categorys/_form')
             {!! Form::close() !!}
         </div>
     </div>
