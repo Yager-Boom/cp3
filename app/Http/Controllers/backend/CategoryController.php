@@ -60,4 +60,8 @@ class CategoryController extends Controller
             }
         }
     }
+    public function destroy()
+    {
+        dd(123);
+    }
 }
