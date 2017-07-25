@@ -3,6 +3,8 @@
 @section('content')
     <div class="container">
         <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
+            <br>
+        <a href="/backend/stores/{{$detail->id}}/category/create" class="btn btn-info pull-left">Create</a>
     </div>
     <div class="container">
         <div class="row">
@@ -11,7 +13,6 @@
                     <div style="border-style:solid;">
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
-                            <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
                                 <br>
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
