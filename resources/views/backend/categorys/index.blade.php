@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="#" class="btn btn-info pull-right" onclick="history.back();">上一頁</a>
+    <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -13,6 +13,7 @@
                                 <br>
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
+                            {{dd($detail)}}
                             {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
                                 {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
                             {!! Form::close() !!}
