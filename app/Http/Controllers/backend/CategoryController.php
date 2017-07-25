@@ -59,6 +59,12 @@ class CategoryController extends Controller
             }
         }
     }
+
+    public function edit(Request $request)
+    {
+        dd(12355789);
+    }
+
     public function destroy(Request $request)
     {
         $nid = $request['nid'];

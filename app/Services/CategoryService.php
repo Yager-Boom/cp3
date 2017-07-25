@@ -6,10 +6,6 @@ use App\Category;
 
 class CategoryService
 {
-//    public function __construct(CategoryRepository $categoryRepository)
-//    {
-//        $this->categoryRepository = $categoryRepository;
-//    }
     public function details($uid)
     {
         return  \DB::table('user_stores')
