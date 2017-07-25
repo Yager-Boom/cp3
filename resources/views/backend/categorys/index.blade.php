@@ -16,7 +16,7 @@
                             {!! Form::close() !!}
                             @if(isset($detail->id))
                                     <br>
-                                {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'get')) !!}
+                                {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->nid), 'class' => 'form-inline', 'method' => 'get')) !!}
                                     {{ Form::hidden('nid', $detail->nid ) }}
                                     {{ Form::button('修改', ['type' => 'submit', 'class' => 'btn btn-primary',  'title' => '修改'] )  }}
                                 {!! Form::close() !!}
