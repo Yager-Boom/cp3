@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {!! Form::open(array('action' => array('backend\CategoryController@update',$edit_navs))) !!}
+            {!! Form::open(array('action' => array('backend\CategoryController@update',$edit_navs), 'method' => 'post')) !!}
                 123
             {!! Form::close() !!}
         </div>
