@@ -13,7 +13,7 @@
                                 <br>
                             <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
-                            {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
+                            {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id, $request->store_id), 'class' => 'form-inline', 'method' => 'delete')) !!}
                                 {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}
                             {!! Form::close() !!}
                         </div>
