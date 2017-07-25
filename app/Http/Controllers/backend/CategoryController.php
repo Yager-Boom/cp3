@@ -70,6 +70,11 @@ class CategoryController extends Controller
         return view('backend.categorys.edit',compact('edit_navs'));
     }
 
+    public function update()
+    {
+        
+    }
+
     public function destroy(Request $request)
     {
         $nid = $request['nid'];
