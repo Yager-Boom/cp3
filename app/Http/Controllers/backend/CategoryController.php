@@ -23,7 +23,7 @@ class CategoryController extends Controller
         $stores = $this->storeService->getLists($this->User()->id);
         $uid=$this->User()->id;
         $details = \DB::table('user_stores')
-                      ->select('*','navs.id as nid')
+                      ->select('*','navs.id as nid', 'user_stores.store_id as usid')
                       ->leftjoin('navs','navs.store_id', 'user_stores.store_id')
                       ->leftjoin('stores','stores.id', 'navs.store_id')
                       ->where('user_stores.user_id',$uid)
