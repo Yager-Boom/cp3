@@ -5,15 +5,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="/backend/stores/{{$stores->id}}/category/create">Create</a>
                 @foreach($details as $detail)
                     <div style="border-style:solid;">
                         商店網址{{$detail->domain}}
                         <div class="panel-heading">
+                            <a href="/backend/stores/{{$detail->id}}/category/create">Create</a>
                                 <br>
-                            {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id), 'class' => 'form-inline', 'method' => 'edit')) !!}
-                                {{ Form::button('修改', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '修改'] )  }}
-                            {!! Form::close() !!}
+                            <a href="/backend/stores/{{$detail->id}}/category/edit">Edit</a>
                                 <br>
                             {!! Form::open(array('action' => array('backend\CategoryController@destroy', $detail->id), 'class' => 'form-inline', 'method' => 'delete')) !!}
                                 {{ Form::button('刪除', ['type' => 'submit', 'class' => 'btn btn-danger',  'title' => '刪除'] )  }}

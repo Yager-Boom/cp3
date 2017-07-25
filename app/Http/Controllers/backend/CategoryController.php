@@ -27,7 +27,6 @@ class CategoryController extends Controller
                       ->join('stores','stores.id', 'navs.store_id')
                       ->where('user_stores.user_id',$uid)
                       ->get();
-        dd($stores->id);
         return view('backend.categorys.index',compact('stores','details'));
     }
 

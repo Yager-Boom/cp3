@@ -5,15 +5,21 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\BackendController as Controller;
 use App\Services\StoreService;
 use App\Services\ImgService;
+
+
+use App\Repositories\BannerRepository;
+
+
 use App\Store;
 use App\User;
 class StoresController extends Controller
 {
-    public function __construct(StoreService $storeService, ImgService $imgService)
+    public function __construct(StoreService $storeService, ImgService $imgService, BannerRepository $bannerRepository)
     {
         $this->middleware('isStore');
         $this->storeService = $storeService;
         $this->imgService = $imgService;
+        $this->bannerRepository = $bannerRepository;
     }
 
     public function index() //商家Dashboard
@@ -32,7 +38,12 @@ class StoresController extends Controller
         }
         // obj -> array
         $store = $store->first();
-        return view('backend.stores.show', compact('store'));
+
+        // banner
+        $banners = $this->bannerRepository->getBanner($storeId, 0);
+
+        return view('backend.stores.show', compact('store', 'banners'));
+
     }
     public function create()
     {
