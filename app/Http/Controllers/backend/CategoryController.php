@@ -65,11 +65,11 @@ class CategoryController extends Controller
         $stores = $this->storeService->getLists($this->User()->id);
         dd($stores);
         $nid = $request['nid'];
-        $edit_navs = \DB::table('navs')
+        $edit_category = \DB::table('navs')
                         ->where('id',$nid)
                         ->get();
-        $edit_navs = $edit_navs[0]->id;
-        return view('backend.categorys.edit',compact('edit_navs','stores'));
+        $edit_category = $edit_category[0]->id;
+        return view('backend.categorys.edit',compact('edit_category','stores'));
     }
 
     public function update()
