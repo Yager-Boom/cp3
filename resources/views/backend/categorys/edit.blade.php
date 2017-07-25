@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             {!! Form::open(array('action' => array('backend\CategoryController@update', $store_id, $category), 'class' => 'form-inline', 'method' => 'get')) !!}
-                @include('backend/categorys/_form')
+                123
             {!! Form::close() !!}
         </div>
     </div>
