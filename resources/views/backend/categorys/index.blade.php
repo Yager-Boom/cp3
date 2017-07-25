@@ -4,7 +4,7 @@
     <div class="container">
         <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
             <br>
-        <a href="/backend/stores/{{$detail->id}}/category/create" class="btn btn-info pull-left">Create</a>
+        <a href="/backend/stores/{{$stores->id}}/category/create" class="btn btn-info pull-left">Create</a>
     </div>
     <div class="container">
         <div class="row">
