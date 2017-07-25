@@ -60,7 +60,7 @@ class CategoryController extends Controller
             }
         }
     }
-    public function destroy()
+    public function destroy(Request $request)
     {
         dd(123);
     }
