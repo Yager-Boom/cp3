@@ -14,6 +14,7 @@
                             <a href="/backend/stores/{{$detail->usid}}/category/create">
                                 <button class="btn btn-success">新增</button>
                             </a>
+                                <br>
                         @if(isset($detail->id))
                                     <br>
                                 {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->nid), 'class' => 'form-inline', 'method' => 'get')) !!}
