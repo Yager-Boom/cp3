@@ -71,7 +71,17 @@ class CategoryController extends Controller
 
     public function update(Request $request)
     {
-        dd('update');
+        \DB::table('navs')
+            ->where('store_id',$request['store_id'])
+            ->update
+            ([
+                'link' => $request['link'],
+                'position' => $request['position'],
+                'nitem' => $request['nitem'],
+                'sort' => $request['sort'],
+                'created_at' => $now
+            ]);
+        return redirect('/backend/stores/'.$request['store_id'].'/category');
     }
 
     public function destroy(Request $request)
