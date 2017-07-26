@@ -5,15 +5,11 @@
     <div class="row">
         <div class="col-md-3">
 	        <ul>
-<<<<<<< HEAD
-      	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
-       	<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
-
-=======
+      	
 	        	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
 				<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
 				<li><a href="/backend/stores/{{ $store->id }}/category">目錄</a></li>
->>>>>>> 62e0fddb3ea159d85ecdd56d9f739159480771d7
+
 	        </ul>
         </div>
 
