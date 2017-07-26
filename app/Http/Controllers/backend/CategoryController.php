@@ -71,6 +71,7 @@ class CategoryController extends Controller
 
     public function update(Request $request)
     {
+        $now = date("Y/m/d H:i ");
         \DB::table('navs')
             ->where('store_id',$request['store_id'])
             ->update
@@ -79,7 +80,7 @@ class CategoryController extends Controller
                 'position' => $request['position'],
                 'nitem' => $request['nitem'],
                 'sort' => $request['sort'],
-                'created_at' => $now
+                'updated_at' => $now
             ]);
         return redirect('/backend/stores/'.$request['store_id'].'/category');
     }
