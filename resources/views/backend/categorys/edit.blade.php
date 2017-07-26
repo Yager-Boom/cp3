@@ -9,7 +9,7 @@
                 {{ Form::text('category', null , ['class' => 'form-control', 'placeholder' => '輸入商品分類']) }}
             </div>
             <div class="form-group">
-                {{ Form::hidden('store_id', $stores->id , ['class' => 'form-control']) }}
+                {{ Form::hidden('store_id', $store_id , ['class' => 'form-control']) }}
             </div>
         @foreach($details as $detail)
             <div class="form-group">
