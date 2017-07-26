@@ -1,13 +1,14 @@
 @extends('layouts.backend.app')
 
 @section('content')
-	<a href="/backend/stores/{{ $store->id }}/category" class="btn btn-info pull-right">目錄頁</a>
 <div class="container">
     <div class="row">
         <div class="col-md-3">
 	        <ul>
 	        	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
 	        	<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
+	        	<li><a href="/backend/stores/{{ $store->id }}/pages">文章</a></li>
+    				<li><a href="/backend/stores/{{ $store->id }}/category">目錄</a></li>
 	        </ul>
         </div>
 
@@ -53,6 +54,13 @@
 					</div>
 				</div>
 			@endif
+			<hr>
+			<div>
+				@if($page)
+					<h4>{{ $page->title }}</h4>
+					{!! $page->content !!}
+				@endif
+			</div>
 		</div>
 	</div>
 </div>

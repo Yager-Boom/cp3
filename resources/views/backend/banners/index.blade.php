@@ -23,7 +23,7 @@
                             橫幅名稱->{{ $list->name }}
                         </div>
                         <div class="panel-body pull-right">
-                            {!! Form::open(array('action' => array('backend\BannersController@setting', $request->store_id, $list->id),'method' => 'post')) !!}
+                            {!! Form::open(array('action' => array('backend\BannersController@setting', $request->store_id, $list->id),'method' => 'put')) !!}
                             <h4 style="text-align: center;">設定</h4>
                             {!! Form::text('name', $list->name, ['class' => 'form-control', 'placeholder' => $list->name]) !!}
                             {!! Form::selectRange('sort', 1, 5, ['class' => 'form-control', 'placeholder' => $list->sort]) !!}
