@@ -8,21 +8,22 @@
             <div class="form-group">
                 {{ Form::hidden('store_id', $store_id , ['class' => 'form-control']) }}
             </div>
+                <br>
         @foreach($details as $detail)
             <div class="form-group">
-                {{ Form::text('link', $detail->link , ['class' => 'form-control', 'placeholder' => 'link']) }}
+                連結:{{ Form::text('link', $detail->link , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                {{ Form::text('position', $detail->position , ['class' => 'form-control', 'placeholder' => 'position']) }}
+                位置:{{ Form::text('position', $detail->position , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                {{ Form::text('nitem', $detail->nitem , ['class' => 'form-control', 'placeholder' => 'nitem']) }}
+                項目:{{ Form::text('nitem', $detail->nitem , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                {{ Form::text('sort', $detail->sort , ['class' => 'form-control', 'placeholder' => 'sort']) }}
+                排序:{{ Form::text('sort', $detail->sort , ['class' => 'form-control']) }}
             </div>
                 <br>
         @endforeach
