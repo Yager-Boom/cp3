@@ -10,10 +10,6 @@
             </div>
         @foreach($details as $detail)
             <div class="form-group">
-                {{ Form::text('category', $detail->category , ['class' => 'form-control', 'placeholder' => '輸入商品分類']) }}
-            </div>
-                <br>
-            <div class="form-group">
                 {{ Form::text('link', $detail->link , ['class' => 'form-control', 'placeholder' => 'link']) }}
             </div>
                 <br>

@@ -1,10 +1,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            {{ Form::text('category', null , ['class' => 'form-control', 'placeholder' => '輸入商品分類']) }}
-        </div>
-
-        <div class="form-group">
             {{ Form::hidden('store_id', $stores->id , ['class' => 'form-control']) }}
         </div>
         <div class="form-group">
