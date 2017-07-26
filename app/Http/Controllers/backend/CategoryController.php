@@ -64,12 +64,25 @@ class CategoryController extends Controller
     {
         $store_id = $request->store_id;
         $category = $request->category;
-        return view('backend.categorys.edit',compact('category','store_id'));
+        $uid=$this->User()->id;
+        $details = $this->categoryService->details($uid);
+        return view('backend.categorys.edit',compact('category','store_id','details'));
     }
 
     public function update(Request $request)
     {
-        dd('update');
+        $now = date("Y/m/d H:i ");
+        \DB::table('navs')
+            ->where('store_id',$request['store_id'])
+            ->update
+            ([
+                'link' => $request['link'],
+                'position' => $request['position'],
+                'nitem' => $request['nitem'],
+                'sort' => $request['sort'],
+                'updated_at' => $now
+            ]);
+        return redirect('/backend/stores/'.$request['store_id'].'/category');
     }
 
     public function destroy(Request $request)
