@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend.app')
 
 @section('content')
     <a href="#" class="btn btn-info pull-right" onclick="history.back();">上一頁</a>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backend.app')
 
 @section('content')
 	<a href="/backend/stores/{{ $store->id }}/category" class="btn btn-info pull-right">目錄頁</a>
