@@ -11,10 +11,10 @@
                     <div style="border-style:solid;">
                         商店名稱:{{$detail->domain}}
                         <div class="panel-heading">
-                            <button class="btn btn-success">
-                                <a href="/backend/stores/{{$detail->usid}}/category/create">新增</a>
-                            </button>
-                            @if(isset($detail->id))
+                            <a href="/backend/stores/{{$detail->usid}}/category/create">
+                                <button class="btn btn-success">新增</button>
+                            </a>
+                        @if(isset($detail->id))
                                     <br>
                                 {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->nid), 'class' => 'form-inline', 'method' => 'get')) !!}
                                     {{ Form::hidden('nid', $detail->nid ) }}
