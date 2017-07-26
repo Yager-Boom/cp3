@@ -15,6 +15,12 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('store_id');
+            $table->integer('status')->default('1');            
+            $table->string('alias');
+            $table->text('title');
+            $table->text('content');
+            $table->unique(['store_id', 'alias']);
             $table->timestamps();
         });
     }
