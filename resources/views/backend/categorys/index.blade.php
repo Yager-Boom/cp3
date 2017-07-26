@@ -11,9 +11,9 @@
                     <div style="border-style:solid;">
                         商店名稱:{{$detail->domain}}
                         <div class="panel-heading">
-                            {!! Form::open(array('action' => array('backend\CategoryController@create', $detail->id, $detail->store_id), 'class' => 'form-inline', 'method' => 'get')) !!}
-                                {{ Form::button('新增', ['type' => 'submit', 'class' => 'btn btn-success',  'title' => '新增'] )  }}
-                            {!! Form::close() !!}
+                            <button>
+                                <a href="/category/create" class="btn btn-success">新增</a>
+                            </button>
                             @if(isset($detail->id))
                                     <br>
                                 {!! Form::open(array('action' => array('backend\CategoryController@edit', $detail->id, $detail->nid), 'class' => 'form-inline', 'method' => 'get')) !!}
