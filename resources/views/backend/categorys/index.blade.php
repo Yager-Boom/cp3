@@ -8,12 +8,11 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($details as $detail)
-                    {{dd($detail)}}
                     <div style="border-style:solid;">
                         商店名稱:{{$detail->domain}}
                         <div class="panel-heading">
                             <button>
-                                <a href="/backend/stores/{{$detail->store_id}}/category/create" class="btn btn-success">新增</a>
+                                <a href="/backend/stores/{{$detail->usid}}/category/create" class="btn btn-success">新增</a>
                             </button>
                             @if(isset($detail->id))
                                     <br>
