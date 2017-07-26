@@ -24,7 +24,7 @@ class BannersController extends Controller
 	{
         $banners = $this->bannerRepository->getList($request->store_id);
         
-		return view('backend.stores.banners.index', compact('banners', 'request'));
+		return view('backend.banners.index', compact('banners', 'request'));
 	}
 
 	public function create(Request $request)
@@ -32,7 +32,7 @@ class BannersController extends Controller
 		$store = Store::find($request->store_id);
 		$randStr = $this->getRadomStr();
 
-		return view('backend.stores.banners.create', compact('store', 'randStr')); 
+		return view('backend.banners.create', compact('store', 'randStr')); 
 	}
 
 	public function store(Request $request)

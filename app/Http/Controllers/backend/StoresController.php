@@ -7,18 +7,20 @@ use App\Http\Controllers\BackendController as Controller;
 use App\Services\StoreService;
 use App\Services\ImgService;
 use App\Repositories\BannerRepository;
+use App\Repositories\PageRepository;
 
 use App\Store;
 use App\User;
 
 class StoresController extends Controller
 {
-    public function __construct(StoreService $storeService, ImgService $imgService, BannerRepository $bannerRepository)
+    public function __construct(StoreService $storeService, ImgService $imgService, BannerRepository $bannerRepository, PageRepository $pageRepository)
     {
         $this->middleware('isStore');
 		$this->storeService = $storeService;
         $this->imgService = $imgService;
         $this->bannerRepository = $bannerRepository;
+        $this->pageRepository = $pageRepository;
     }
     
     public function index() //商家Dashboard
@@ -42,8 +44,13 @@ class StoresController extends Controller
 
         // banner
         $banners = $this->bannerRepository->getBanner($storeId, 0);
+        $banners = $banners->take(5);
 
-        return view('backend.stores.show', compact('store', 'banners'));
+        //page
+        $pages = $this->pageRepository->showPage($storeId);
+        $page = $pages->first();
+
+        return view('backend.stores.show', compact('store', 'banners', 'page'));
     }
 
     public function create()
