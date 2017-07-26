@@ -12,7 +12,7 @@
                         商店名稱:{{$detail->domain}}
                         <div class="panel-heading">
                             <button>
-                                <a href="/backend/stores/{{$detail->id}}/category/create" class="btn btn-success">新增</a>
+                                <a href="/backend/stores/{{$detail->store_id}}/category/create" class="btn btn-success">新增</a>
                             </button>
                             @if(isset($detail->id))
                                     <br>
