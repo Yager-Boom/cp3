@@ -29,6 +29,7 @@
         @endforeach
                 {{ Form::button('送出', ['type' => 'submit', 'class' => 'btn btn-success',  'title' => '送出'] )  }}
             {!! Form::close() !!}
+            <a href="#" class="btn btn-info pull-left" onclick="history.back();">上一頁</a>
         </div>
     </div>
 </div>
