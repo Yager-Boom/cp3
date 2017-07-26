@@ -66,8 +66,7 @@ class CategoryController extends Controller
         $category = $request->category;
         $uid=$this->User()->id;
         $details = $this->categoryService->details($uid);
-        dd($details);
-        return view('backend.categorys.edit',compact('category','store_id'));
+        return view('backend.categorys.edit',compact('category','store_id','details'));
     }
 
     public function update(Request $request)
