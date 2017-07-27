@@ -1,16 +1,15 @@
 @extends('layouts.backend.app')
 
 @section('content')
-<!-- Nav tabs -->
+<!-- Nav tabs -->  
   <ul class="nav nav-tabs nav-submenu" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#home" role="tab">首頁</a>
+      <a class="nav-link active" data-toggle="tab" href="#home" role="tab">商店列表</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#profile" role="tab">總體分析</a>
-    </li>
+      <a class="nav-link" data-toggle="tab" href="#profile" role="tab">整體分析</a>
+    </li>      
   </ul>
-
   <!-- Tab panes -->
   <div class="tab-content bg-faded">
     <div class="tab-pane active" id="home" role="tabpanel">
@@ -24,6 +23,7 @@
                 <p class="card-text text-center text-muted"><i class="fa fa-star" aria-hidden="true"></i> 1</p>
               </div>
                 <a href="" class="img-center"><img class="card-img-top" src="http://placehold.it/180x180/dddddd/000" alt="Card image cap"></a>
+              <a class="btn btn-primary">建立商店</a>
             </div>
             <span class="upload"><button class="btn btn-primary"><i class="fa fa-picture-o" aria-hidden="true"></i>上傳圖片</button></span>
           </div>

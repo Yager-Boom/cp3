@@ -15,6 +15,11 @@ class CreateStoreNavsTable extends Migration
     {
         Schema::create('store_navs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('store_id');
+            $table->string('link');
+            $table->string('position');
+            $table->string('nitem');
+            $table->string('sort');
             $table->timestamps();
         });
     }

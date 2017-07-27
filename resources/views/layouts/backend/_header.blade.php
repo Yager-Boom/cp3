@@ -8,7 +8,6 @@
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item nav-blank"><span class="m-x-2 nav-link">|</span></li>
           <li class="nav-item dropdown dropdown-main">
               <a class="nav-link" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownSub">
                   <i class="fa fa-bars" aria-hidden="true"></i> 主要選單
@@ -17,62 +16,45 @@
                   <div class="card-group">
                     <div class="card">
                       <div class="card-block">
-                        <h5 class="card-title">主要專案</h5>
-                        <p class="card-text"><a href="manage.html" data-des="一些介紹sfsdfsdf">專案管理一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹qereytru">主要專案連結一</a></p>
-                        <p class="card-text"><a href="build.html" data-des="一些介紹qereytru">新增專案</a></p>
+                        <h5 class="card-title">資產</h5>
+                        <p class="card-text"><a href="" data-des="一些介紹qereytru">公司管理</a></p>
+                        <p class="card-text"><a href="manage.html" data-des="一些介紹sfsdfsdf">商店管理</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹qereytru">公司人員</a></p>
                       </div>
                     </div>
                     <div class="card card-sub">
                       <div class="card-block">
-                        <h5 class="card-title">次要專案</h5>
-                        <p class="card-text"><a href="" data-des="一些介紹gggggg">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹vvvvv">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹44444">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹2222">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹jjjj">次要專案連結一</a></p>
+                        <h5 class="card-title">建立與管理</h5>
+                        <p class="card-text"><a href="" data-des="一些介紹gggggg">建立商店</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹gggggg">上架商品</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹gggggg">會員管理</a></p>
                       </div>
                     </div>
                     <div class="card card-sub">
                       <div class="card-block">
-                        <h5 class="card-title">次要專案</h5>
-                        <p class="card-text"><a href="" data-des="一些介紹j">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹fffff">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹fffff">次要專案連結一</a></p>
+                        <h5 class="card-title">營銷</h5>
+                        <p class="card-text"><a href="" data-des="一些介紹j">電訪</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹j">優惠券</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹j">電子報</a></p>
                       </div>
                     </div>
                     <div class="card card-sub">
                       <div class="card-block">
-                        <h5 class="card-title">次要專案</h5>
-                        <p class="card-text"><a href="" data-des="一些介紹sdddd">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹dd">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹jjjj">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹jjj">次要專案連結一</a></p>
+                        <h5 class="card-title">分析報表</h5>
+                        <p class="card-text"><a href="" data-des="一些介紹sdddd">會員分析</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹sdddd">訂單分析</a></p>
                       </div>
                     </div>
                     <div class="card card-sub">
                       <div class="card-block">
-                        <h5 class="card-title">次要專案</h5>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
+                        <h5 class="card-title">自動化</h5>
+                        <p class="card-text"><a href="" data-des="一些介紹">郵件通知</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹">簡訊通知</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹">對帳</a></p>
+                        <p class="card-text"><a href="" data-des="一些介紹">托運單匯出</a></p>
                       </div>
                     </div>
-                    <div class="card card-sub">
-                      <div class="card-block">
-                        <h5 class="card-title">次要專案</h5>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                        <p class="card-text"><a href="" data-des="一些介紹">次要專案連結一</a></p>
-                      </div>
-                    </div>
+                    
                   </div>
                   <div class="card-footer d-flex">
                     <div class="card-more text-right"><a href="" id="more">更多選單 <i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
