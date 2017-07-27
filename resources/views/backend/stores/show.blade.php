@@ -7,10 +7,10 @@
 	        <ul>
       	
 	        	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
-				<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
-				<li><a href="/backend/stores/{{ $store->id }}/category">目錄</a></li>
-
-	        </ul>
+		   	<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
+	        	<li><a href="/backend/stores/{{ $store->id }}/pages">文章</a></li>
+    				<li><a href="/backend/stores/{{ $store->id }}/category">目錄</a></li>
+		</ul>
         </div>
 
         <div class="col-md-9 coverflow">
@@ -55,6 +55,13 @@
 					</div>
 				</div>
 			@endif
+			<hr>
+			<div>
+				@if($page)
+					<h4>{{ $page->title }}</h4>
+					{!! $page->content !!}
+				@endif
+			</div>
 		</div>
 	</div>
 </div>
