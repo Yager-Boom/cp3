@@ -12,13 +12,12 @@
 
   <!-- Styles -->
   <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+  <link href="{{ asset('css/backend/switcher.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/backend/styles.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/backend/selectize.bootstrap3.css') }}" rel="stylesheet">
   <link href="{{ asset('css/backend/selectize.bootstrap3.css') }}" rel="stylesheet">
   <link href="{{ asset('css/backend/smart_wizard.css') }}" rel="stylesheet">
   <link href="{{ asset('css/backend/bootstrap-formhelpers.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/backend/selectize.bootstrap3.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/backend/switcher.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/backend/styles.css') }}" rel="stylesheet">
-  
   <!-- include libraries(jQuery, bootstrap) -->
   <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"> -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
@@ -35,9 +34,7 @@
   @include('layouts/backend/_header')
   <div class="container-fluid p-0 border-b main">
   @yield('content')
-  </div>
-    
-  
+  </div>    
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script>
   <!--build:js js/main.min.js -->
@@ -47,63 +44,7 @@
   <script src="{{ asset('js/lib/selectize.js') }}"></script>
   <script src="{{ asset('js/lib/jquery.smartWizard.js') }}"></script>
   <script src="{{ asset('js/lib/bootstrap-formhelpers.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>    
-
-  <!-- include summernote css/js-->
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
-  <script type="text/javascript">
-      $.ajaxSetup({
-          headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
-      });
-
-      $(document).ready(function () {        
-          $('#summernote').summernote({
-              height: 370,                 // set editor height
-              minHeight: 370,             // set minimum height of editor
-              maxHeight: null,             // set maximum height
-              callbacks: {
-                  // onInit: function(e) {
-                  //   $("#summernote").summernote("fullscreen.toggle");
-                  // },
-                  onImageUpload: function (files, editor, $editable) {
-                      for (var i = files.length - 1; i >= 0; i--) {
-                          sendFile(files[i], editor);
-                          console.log(files[i], editor);
-                      }
-                  }
-              }
-          });
-          $('.note-codable').keyup(function(){
-            $('#summernote').html(this.value);
-          });
-          function sendFile(file, el) {
-              data = new FormData();
-              data.append("file", file);
-              data.append("tmpPath", $('.tmpPath').val());
-              data.append("_token", $('meta[name="csrf-token"]').attr('content'));
-              jQuery.ajax({
-                  url: '{{ action('backend\ImagesController@uploadFile') }}',
-                  data: data,
-                  cache: false,
-                  contentType: false,
-                  processData: false,
-                  enctype: 'multipart/form-data',
-                  type: 'POST',
-                  success: function (s) {
-                      console.log(s);
-                      $('#summernote').summernote('insertImage', s, function ($image) {
-                          $image.css('width', '100%');
-                          $image.attr('class', 'img-responsive lazy');
-                          $image.attr('data-original', s);
-                      });
-                  },
-                  error: function (jqXHR, textStatus, errorThrown) {
-                      console.log(jqXHR + " " + textStatus + " " + errorThrown);
-                  }
-              });
-          }
-      });
-  </script>     
+  <script src="{{ asset('js/main.js') }}"></script>
+  
 </body>
 </html>

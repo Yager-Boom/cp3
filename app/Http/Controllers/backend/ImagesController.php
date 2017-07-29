@@ -22,6 +22,5 @@ class ImagesController extends Controller
         $result = $this->imgService->tmpFile($file, $request->tmpPath);
         
         return $result;
-    }
-    
+    }    
 }

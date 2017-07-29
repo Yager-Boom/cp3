@@ -7,6 +7,9 @@ Route::group(['prefix' => 'backend'], function()
 		Route::get('/', 'backend\StoresController@index');
 		Route::post('/edit-upload', 'backend\ImagesController@uploadFile');
 		Route::resource('stores', 'backend\StoresController');
+		Route::get('/stores/{store_id}/setting', 'backend\StoresController@setting');
+		Route::post('/stores/{store_id}/setting', 'backend\StoresController@savesetting');
+
 		Route::resource('/stores/{store_id}/products', 'backend\ProductsController');
 		Route::resource('/stores/{store_id}/category', 'backend\CategoryController');
 		Route::resource('/stores/{store_id}/banners', 'backend\BannersController');
