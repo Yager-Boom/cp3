@@ -73,12 +73,12 @@ class CategoryController extends Controller
     {
         $now = date("Y/m/d H:i ");
         \DB::table('categories')
-            ->where('ctguid',$request['store_id'])
+            ->where('ctguid',$request['ctguid'])
             ->update
             ([
-                'limit_group' => $request['link'],
-                'banner' => $request['position'],
-                'citem' => $request['nitem'],
+                'limit_group' => $request['limit_group'],
+                'banner' => $request['banner'],
+                'citem' => $request['citem'],
                 'sort' => $request['sort'],
                 'updated_at' => $now
             ]);

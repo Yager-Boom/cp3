@@ -6,24 +6,24 @@
         <div class="col-md-12">
             {!! Form::open(array('action' => array('backend\CategoryController@update', $store_id, $category), 'class' => 'form-inline', 'method' => 'PATCH')) !!}
             <div class="form-group">
-                {{ Form::hidden('store_id', $store_id , ['class' => 'form-control']) }}
+                {{ Form::hidden('ctguid', $store_id , ['class' => 'form-control']) }}
             </div>
                 <br>
         @foreach($details as $detail)
             <div class="form-group">
-                連結:{{ Form::text('link', $detail->link , ['class' => 'form-control']) }}
+                limit_group:{{ Form::text('limit_group', $detail->link , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                位置:{{ Form::text('position', $detail->position , ['class' => 'form-control']) }}
+                banner:{{ Form::text('banner', $detail->position , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                項目:{{ Form::text('nitem', $detail->nitem , ['class' => 'form-control']) }}
+                citem:{{ Form::text('citem', $detail->nitem , ['class' => 'form-control']) }}
             </div>
                 <br>
             <div class="form-group">
-                排序:{{ Form::text('sort', $detail->sort , ['class' => 'form-control']) }}
+                sort:{{ Form::text('sort', $detail->sort , ['class' => 'form-control']) }}
             </div>
                 <br>
         @endforeach
