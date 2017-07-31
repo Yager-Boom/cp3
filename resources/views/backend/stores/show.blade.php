@@ -1,70 +1,148 @@
-@extends('layouts.app')
+@extends('layouts.backend.product')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-	        <ul>
-      	
-	        	<li><a href="/backend/stores/{{ $store->id }}/products">商品</a></li>
-		   	<li><a href="/backend/stores/{{ $store->id }}/banners">橫幅</a></li>
-	        	<li><a href="/backend/stores/{{ $store->id }}/pages">文章</a></li>
-    				<li><a href="/backend/stores/{{ $store->id }}/category">目錄</a></li>
-		</ul>
-        </div>
 
-        <div class="col-md-9 coverflow">
-			商店Dashboard{{ $store->id }}
+<div class="container-fluid py-2" id="maincontent">
+	<ul class="nav nav-tabs nav-justified nav-style" role="tablist">
+	    <li class="nav-item">
+	        <a class="nav-link " data-toggle="tab" href="#home" role="tab"><i class="fa fa-snowflake-o" aria-hidden="true"></i>營銷分析</a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link active" data-toggle="tab" href="#profile" role="tab"><i class="fa fa-snowflake-o" aria-hidden="true"></i> 商品類別
+	    <span id="ad-chose" class="mr-3 hidden-xs-up alert pop-alert pull-right alert-success alert-dismissible fade show" role="alert">已選擇 <strong>1</strong> 個類別  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+	    </a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><i class="fa fa-snowflake-o" aria-hidden="true"></i> 商品</a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link" data-toggle="tab" href="#settings" role="tab"><i class="fa fa-snowflake-o" aria-hidden="true"></i> 加購品</a>
+	    </li>
+	</ul>
+	<!-- Tab panes -->
+	<div class="d-flex tab-wrap">
+		<div class="tab-content tab-main">
+			<div class="tab-pane" id="home" role="tabpanel">
 
-			本日新增訂單
-			未處理訂單
 
-			放一些分析、提醒類的項目
-        	<hr>
-        	@if($banners)
-		        <div style="width:300px; height:400px">
-			        <div id="mycarousel" class="carousel slide" data-ride="carousel">
-					  	<!-- Indicators -->
-					  	<ol class="carousel-indicators">
-					  		@foreach($banners as $key => $banner)
-						    	<li data-target="#mycarousel" data-slide-to="{{ $key }}" class="@if($key == 0) active @endif"></li>
-						    @endforeach
-					  	</ol>	
-
-					  	<!-- Wrapper for slides -->
-					  	<div class="carousel-inner" role="listbox">
-					  		@foreach($banners as $key => $banner)
-						    	<div class="item @if($key == 0) active @endif">
-							      	<img src="{{ $banner->img }}" alt="...">
-							      	<div class="carousel-caption">
-							        	
-							      	</div>
-							    </div>	
-						 	@endforeach
-					  	</div>
-
-					  	<!-- Controls -->
-					  	<a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
-					    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					    	<span class="sr-only">Previous</span>
-					  	</a>
-					  	<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
-					    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					    	<span class="sr-only">Next</span>
-					  	</a>
+			</div>
+      <div class="tab-pane active" id="profile" role="tabpanel">
+				<div class="nav mb-2">
+					<div class="btn-group">
+		        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-plus" aria-hidden="true"></i> 新增目錄</button>
 					</div>
 				</div>
-			@endif
-			<hr>
-			<div>
-				@if($page)
-					<h4>{{ $page->title }}</h4>
-					{!! $page->content !!}
-				@endif
+				<div class="content">
+					<div class="fixed-table-wrap">
+						<table class="table table-sm table-bordered table-hover fixed-table">
+							<thead class="thead-default">
+								<tr>
+                  <th width="25">
+                    <input type="radio" name="">
+                  </th>
+                  <th width="30"></th>
+                  <th width="300">行銷活動名稱 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>投放 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th width="200px">成果 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+	              </tr>
+		          </thead>
+							<tbody>
+								<tr>
+                  <td class="align-self-center">
+										<label class="custom-control custom-checkbox">
+											<input type="checkbox" class="custom-control-input contol-checkbox" value="1" id="checkbox-1">
+											<span class="custom-control-indicator"></span>
+                      </label>
+                  </td>
+									<td>
+										<div class="form-switcher form-switcher-md form-switcher-sm-phone">
+      							<input type="checkbox" name="switcher-md" id="switcher-md">
+      							<label class="switcher" for="switcher-md"></label>
+						</div>    		
+					</td>
+                  <td>測測
+                      <br><span class="text-muted small onhover"><a href="">連結</a>。<a href="">連結</a></span></td>
+                  <td><strong>停止投放</strong>
+                      <br><span class="text-muted small">已經停止</span></td>
+                  <td><strong>-</strong>
+                      <br><span class="text-muted small">購買</span></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+                  <td><strong>91257</strong></td>
+              	</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+      <div class="tab-pane" id="messages" role="tabpanel">
+				<div class="nav mb-2">
+					<div class="btn-group">
+		        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-plus" aria-hidden="true"></i> 新增商品</button>
+					</div>
+	        <button type="button" class="btn-control btn btn-sm btn-secondary mx-2" disabled> 編輯</button>
+	        <button type="button" class="btn-control btn btn-sm btn-secondary mx-2 mr-auto" data-toggle="tooltip" data-placement="bottom" title="請選擇至少一個行銷專案" disabled>複製商品</button>
+				</div>
+      </div>
+      <div class="tab-pane" id="settings" role="tabpanel">...</div>
+		</div>
+		<!-- 展開編輯區塊 -->
+		<div class="sidebar d-flex">
+			<div class="sidebar-menu">
+				<div class="sidebar-inner">
+          <ul class="nav flex-column">
+            <li class="nav-item sidebar-item">
+							<a class="nav-link active" href="#"><i class="fa fa-2x fa-chevron-circle-right" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item sidebar-item">
+ 							<a class="nav-link" href="#"><i class="fa fa-2x fa-hand-peace-o" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item sidebar-item">
+              <a class="nav-link" href="#"><i class="fa fa-2x fa-hand-peace-o" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+				</div>
+        <div class="wrapmenu" data-toggle="tooltip" data-placement="left" title="請選擇行銷方案"></div>
+      </div>
+			<div class="sidebar-content">
+				<div class="sidebar-header navbar-inverse"><h6>行銷活動專案</h6></div>
+				<div class="sidebar-main bg-fade">
+          <ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#s-effect" role="tab"><i class="fa fa-signal" aria-hidden="true"></i> 成效</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" data-toggle="tab" href="#s-cal" role="tab"><i class="fa fa-users" aria-hidden="true"></i> 人口統計</a>
+            </li>
+            <li class="nav-item">
+            	<a class="nav-link" data-toggle="tab" href="#s-theme" role="tab"><i class="fa fa-window-restore" aria-hidden="true"></i> 版位</a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="s-effect" role="tabpanel">...</div>
+            <div class="tab-pane" id="s-cal" role="tabpanel">...</div>
+            <div class="tab-pane" id="s-theme" role="tabpanel">...</div>
+          </div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 
 <script type="text/javascript">
 	if($('.coverflow .carousel-inner div.item').length < 2) 
@@ -73,4 +151,4 @@
 	}
 </script>
 
-@endsection
+@endSection

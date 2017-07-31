@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNavsTable extends Migration
+class CreateInvestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateNavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('navs', function (Blueprint $table) {
+        Schema::create('invests', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('store_id');
-            $table->string('link');
-            $table->string('position');            
-            $table->string('nitem');
-            $table->string('sort');
+            $table->integer('store_id');
+            $table->integer('company_id');
+            $table->integer('plan');
+            $table->integer('quantity');
+            $table->integer('quota');
+            $table->text('log');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateNavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('navs');
+        Schema::dropIfExists('invests');
     }
 }

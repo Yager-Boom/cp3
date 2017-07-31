@@ -1,0 +1,235 @@
+/*!  
+ * SmartWizard v4.x
+ * jQuery Wizard Plugin
+ * http://www.techlaboratory.net/smartwizard
+ *
+ * Created by Dipu Raj
+ * http://dipuraj.me
+ *
+ * Licensed under the terms of MIT License
+ * https://github.com/techlab/SmartWizard/blob/master/LICENSE
+ */
+
+/* SmartWizard Basic CSS */
+.sw-main {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.sw-main .sw-container {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.sw-main .step-content {
+    display: none;
+    position: relative;
+    margin: 0;
+}
+
+.sw-main .sw-toolbar {
+    margin-left: 0;
+}
+
+
+/* SmartWizard Theme: White */
+.sw-theme-default {
+    top: 40px;
+}
+
+.sw-theme-default .sw-container {
+    min-height: 250px;
+    margin-left: 250px;
+    height: auto;
+}
+
+.sw-theme-default .step-content {
+    padding: 10px;
+    border: 0px solid #D4D4D4;
+    text-align: left;
+}
+
+.sw-theme-default .sw-toolbar {
+    border-radius: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: calc( 100% - 250px);
+    float: right;
+}
+
+.sw-theme-default .sw-toolbar-top {
+    border-bottom-color: #ddd !important;
+}
+
+.sw-theme-default .sw-toolbar-bottom {
+    border-top-color: #ddd !important;
+}
+.sw-theme-default > ul.step-anchor{
+    display: block;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    border-right: 1px solid #ccc;
+    top: 95px ;
+}
+.sw-theme-default > ul.step-anchor > li {
+    border-bottom: 1px solid #ccc;
+    border-left: 5px solid transparent;
+    background: #fff;
+    padding: 1em;
+}
+
+.sw-theme-default > ul.step-anchor > li:hover{
+    background: #f7f7f9;
+    transition: all .5s ease;
+}
+.sw-theme-default > ul.step-anchor > li.smartwizard-btn, .sw-theme-default > ul.step-anchor > li.smartwizard-btn:hover{
+    border-bottom: none;
+    margin-top: 240px;
+    background: transparent;
+}
+.sw-theme-default > ul.step-anchor > li.active{
+    border-left-color: #5bc0de;
+}
+
+.sw-theme-default > ul.step-anchor > li > a:before{
+    content: '－';
+    color: #000;
+    margin-left: 1.4em;
+    border-left: 1px solid #000;
+}
+.sw-theme-default > ul.step-anchor > li > a > span:not(:first-child):before{
+    content: '－';
+    color: #000;
+    margin-left: 1.4em;
+    border-left: 1px solid #000;
+}
+
+
+.sw-theme-default > ul.step-anchor > li > a, .sw-theme-default > ul.step-anchor > li > a:hover {
+    color: #bbb;
+    text-decoration: none;
+    outline-style: none;
+    background: transparent !important;
+    border: none !important;
+    display: block;
+
+}
+
+.sw-theme-default > ul.step-anchor > li.clickable > a:hover {
+    color: #4285F4 !important;
+    background: transparent !important;
+}
+
+
+
+.sw-theme-default > ul.step-anchor > li.active > a {
+    border: none !important;
+    color: #5bc0de !important;
+    background: transparent !important;
+}
+
+.sw-theme-default > ul.step-anchor > li.active > a > span.multiple-anchor {
+    border: none !important;
+    color: #000 !important;
+    background: transparent !important;
+}
+
+
+.sw-theme-default > ul.step-anchor > li.active .fa-lock{
+    display: none;
+}
+
+.sw-theme-default > ul.step-anchor > li.done > a {
+    border: none !important;
+    color: #000 !important;
+    background: transparent !important;
+}
+
+
+
+.sw-theme-default > ul.step-anchor > li.danger > a {
+    border: none !important;
+    color: #d9534f !important;
+    background: transparent !important;
+}
+
+
+.sw-theme-default > ul.step-anchor > li.disabled > a, .sw-theme-default > ul.step-anchor > li.disabled > a:hover {
+    color: #eee !important;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+    .sw-theme-default > .nav-tabs > li {
+        float: none !important;
+    }
+}
+
+/* Loader Animation
+Courtesy: http://bootsnipp.com/snippets/featured/loading-button-effect-no-js
+*/
+@-webkit-keyframes ld {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg) scale(1.1);
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes ld {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg) scale(1.1);
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.sw-theme-default > ul.step-anchor > li.loading:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #4285f4;
+    border-right-color: #4285f4;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    -webkit-animation: ld 1s ease-in-out infinite;
+    animation: ld 1s ease-in-out infinite;
+}

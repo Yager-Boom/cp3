@@ -78,8 +78,11 @@ class StoresController extends Controller
                 'alias' => $randStr,
                 'logo' => $logo
             ));
-            // dd($store_arr);
+
+
             $store = $user->stores()->save($store_arr);
+            
+
             return redirect('/backend');
         }
         catch (\Exception $e)
@@ -90,4 +93,27 @@ class StoresController extends Controller
             }
         }
     }
+
+
+
+
+    public function setting(Request $request)
+    {
+        // object
+        $store = $this->storeService->getOne($this->User()->id, $request->store_id);
+
+        if($store->isEmpty())
+        {
+            return redirect('/backend');
+        }
+        // obj -> array
+        $store = $store->first();        
+        return view('backend.stores.setting', compact('stores'));       
+    }
+
+    public function savesetting(Request $request)
+    {
+
+    }
 }
+
