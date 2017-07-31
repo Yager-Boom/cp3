@@ -15,6 +15,7 @@ class CreateStoresTable extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('store_name');
             $table->string('domain')->index()->unique();
             $table->integer('type')->default('0');
             $table->string('logo');

@@ -18,7 +18,8 @@ class CreateProductPricesTable extends Migration
             $table->string('product_id');
             $table->string('guid');
             $table->integer('pdt_base');//出貨數量
-            $table->string('pdt_item_title');
+            $table->string('pdt_unit');
+            $table->integer('pdt_sell_price');
             $table->string('pdt_item_subtitle');
             $table->timestamps();
         });
