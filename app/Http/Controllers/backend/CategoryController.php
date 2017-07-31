@@ -39,13 +39,13 @@ class CategoryController extends Controller
         try
         {
             $now = date("Y/m/d H:i ");
-            \DB::table('navs')
+            \DB::table('categories')
                ->insert
                ([
-                'store_id' => $request['store_id'],
-                'link' => $request['link'],
-                'position' => $request['position'],
-                'nitem' => $request['nitem'],
+                'ctguid' => $request['ctguid'],
+                'limit_group' => $request['limit_group'],
+                'banner' => $request['banner'],
+                'citem' => $request['citem'],
                 'sort' => $request['sort'],
                 'created_at' => $now
                ]);
@@ -72,13 +72,13 @@ class CategoryController extends Controller
     public function update(Request $request)
     {
         $now = date("Y/m/d H:i ");
-        \DB::table('navs')
-            ->where('store_id',$request['store_id'])
+        \DB::table('categories')
+            ->where('ctguid',$request['store_id'])
             ->update
             ([
-                'link' => $request['link'],
-                'position' => $request['position'],
-                'nitem' => $request['nitem'],
+                'limit_group' => $request['link'],
+                'banner' => $request['position'],
+                'citem' => $request['nitem'],
                 'sort' => $request['sort'],
                 'updated_at' => $now
             ]);

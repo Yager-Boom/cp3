@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col-md-12">
         <div class="form-group">
-            {{ Form::hidden('store_id', $stores->id , ['class' => 'form-control']) }}
+            {{ Form::hidden('ctguid', $stores->id , ['class' => 'ctguid']) }}
         </div>
         <div class="form-group">
-            {{ Form::text('link', null , ['class' => 'form-control', 'placeholder' => 'link']) }}
+            {{ Form::text('limit_group', null , ['class' => 'form-control', 'placeholder' => 'limit_group']) }}
         </div>
         <div class="form-group">
-            {{ Form::text('position', null , ['class' => 'form-control', 'placeholder' => 'position']) }}
+            {{ Form::text('banner', null , ['class' => 'form-control', 'placeholder' => 'banner']) }}
         </div>
         <div class="form-group">
-            {{ Form::text('nitem', null , ['class' => 'form-control', 'placeholder' => 'nitem']) }}
+            {{ Form::text('citem', null , ['class' => 'form-control', 'placeholder' => 'citem']) }}
         </div>
         <div class="form-group">
             {{ Form::text('sort', null , ['class' => 'form-control', 'placeholder' => 'sort']) }}
