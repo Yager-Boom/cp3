@@ -35,7 +35,7 @@
 		$('#save_change').click(function () {
             $.ajax(
                 {
-					url: "2/category/store555",
+					url: "/category/store",
                     data:'123',
 					success: function(response)
 					{
