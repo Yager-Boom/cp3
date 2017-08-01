@@ -1,11 +1,6 @@
 @extends('layouts.backend.product')
 
 @section('content')
-
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-		Launch demo modal
-	</button>
-
 	<!-- Modal start-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -26,7 +21,6 @@
 			</div>
 		</div>
 	</div>
-	<!--modal end-->
 
 <div class="container-fluid py-2" id="maincontent">
 	<ul class="nav nav-tabs nav-justified nav-style" role="tablist">
@@ -54,7 +48,9 @@
       <div class="tab-pane active" id="profile" role="tabpanel">
 				<div class="nav mb-2">
 					<div class="btn-group">
-		        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-plus" aria-hidden="true"></i> 新增目錄</button>
+		        <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#exampleModal">
+					<i class="fa fa-plus" aria-hidden="true"></i> 新增目錄
+				</button>
 					</div>
 				</div>
 				<div class="content">
