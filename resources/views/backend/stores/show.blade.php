@@ -36,7 +36,6 @@
             $.ajax(
                 {
 					url: "/backend/stores/2/category/store",
-                    data:'123',
 					success: function(response)
 					{
                 	    console.log('success');
