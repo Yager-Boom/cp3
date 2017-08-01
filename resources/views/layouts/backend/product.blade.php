@@ -10,6 +10,20 @@
     <link href="{{ asset('css/backend/selectize.bootstrap3.css') }}" rel="stylesheet">
     <link href="{{ asset('css/backend/switcher.css') }}" rel="stylesheet">
 
+    <!--build:js js/main.min.js -->
+    <script src="{{ asset('js/lib/jquery.js') }}"></script>
+    <script src="{{ asset('js/lib/tether.js') }}"></script>
+    <script src="{{ asset('js/lib/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/lib/selectize.js') }}"></script>
+
+    <script src="{{ asset('js/lib/jquery_dataTables.js') }}"></script>
+    <script scr="{{ asset('js/lib/dataTables_bootstrap4.js') }}"></script>
+    <script scr="{{ asset('js/lib/dataTables_fixedColumns.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <!-- endbuild -->
+
     <!--endbuild-->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css">
     <style>
@@ -81,19 +95,6 @@
     <footer class="fixed-bottom bg-faded">
         <button class="btn btn-secondary pull-right">回報</button>
     </footer>
-    <!--build:js js/main.min.js -->
-    <script src="{{ asset('js/lib/jquery.js') }}"></script>
-    <script src="{{ asset('js/lib/tether.js') }}"></script>
-    <script src="{{ asset('js/lib/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/lib/selectize.js') }}"></script>
-
-    <script src="{{ asset('js/lib/jquery_dataTables.js') }}"></script>
-    <script scr="{{ asset('js/lib/dataTables_bootstrap4.js') }}"></script>
-    <script scr="{{ asset('js/lib/dataTables_fixedColumns.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/lib/moment.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/lib/daterangepicker.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>    
-    <!-- endbuild -->
     
     <script>
     // 選擇廣告對象篩選
