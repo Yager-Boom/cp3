@@ -13,8 +13,17 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					This DOM is just for Create Category...
-					(with ajax)
+					<!--ajax start-->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								{!! Form::open(array('action' => array('backend\CategoryController@store',$stores->id))) !!}
+								@include('backend/categorys/_form')
+								{!! Form::close() !!}
+							</div>
+						</div>
+					</div>
+					<!--ajax end-->
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
