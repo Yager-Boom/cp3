@@ -1,6 +1,33 @@
 @extends('layouts.backend.product')
 
 @section('content')
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Launch demo modal
+	</button>
+
+	<!-- Modal start-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modal end-->
+
 <div class="container-fluid py-2" id="maincontent">
 	<ul class="nav nav-tabs nav-justified nav-style" role="tablist">
 	    <li class="nav-item">
@@ -35,29 +62,29 @@
 						<table class="table table-sm table-bordered table-hover fixed-table">
 							<thead class="thead-default">
 								<tr>
-                  <th width="25">
-                    <input type="radio" name="">
-                  </th>
-                  <th width="30"></th>
-                  <th width="300">行銷活動名稱 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>投放 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th width="200px">成果 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-                  <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
-	              </tr>
-		          </thead>
+								 	<th width="25">
+									<input type="radio" name="">
+								 	</th>
+								 	<th width="30"></th>
+								 	<th width="300">行銷活動名稱 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>投放 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th width="200px">成果 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								 	<th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
+								</tr>
+						  </thead>
 							<tbody>
 								<tr>
                   <td class="align-self-center">
-										<label class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input contol-checkbox" value="1" id="checkbox-1">
-											<span class="custom-control-indicator"></span>
+					  <label class="custom-control custom-checkbox">
+					  	<input type="checkbox" class="custom-control-input contol-checkbox" value="1" id="checkbox-1">
+					  	<span class="custom-control-indicator"></span>
                       </label>
                   </td>
 									<td>
