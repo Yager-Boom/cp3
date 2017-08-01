@@ -25,11 +25,29 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" id="save_change">Save changes</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!--之後2要換掉-->
+	<script>
+		$('#save_change').click(function () {
+            $.ajax(
+                {
+					url: "backend/stores/2/category/store",
+					success: function(result)
+					{
+                	    console.log(123);
+                	},
+					error: function(result)
+                	{
+                	    console.log(123);
+                	}
+                }
+			)
+        })
+	</script>
 
 
 <div class="container-fluid py-2" id="maincontent">
