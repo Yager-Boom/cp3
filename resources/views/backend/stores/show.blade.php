@@ -12,7 +12,8 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					...
+					This DOM is just for Create Category...
+					(with ajax)
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
