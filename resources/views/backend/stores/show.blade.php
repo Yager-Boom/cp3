@@ -2,37 +2,33 @@
 
 @section('content')
 
-<div class="container-fluid py-2" id="maincontent">
-	
-	<div>
-		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-			Launch demo modal
-		</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Launch demo modal
+	</button>
 
-		<!-- Modal start-->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
+	<!-- Modal start-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
 				</div>
 			</div>
 		</div>
-		<!--modal end-->
 	</div>
-	
+	<!--modal end-->
+
+<div class="container-fluid py-2" id="maincontent">
 	<ul class="nav nav-tabs nav-justified nav-style" role="tablist">
 	    <li class="nav-item">
 	        <a class="nav-link " data-toggle="tab" href="#home" role="tab"><i class="fa fa-snowflake-o" aria-hidden="true"></i>營銷分析</a>
@@ -95,7 +91,6 @@
 										<div class="form-switcher form-switcher-md form-switcher-sm-phone">
       							<input type="checkbox" name="switcher-md" id="switcher-md">
       							<label class="switcher" for="switcher-md"></label>
-										</div>
     							</td>
                   <td>測測
                       <br><span class="text-muted small onhover"><a href="">連結</a>。<a href="">連結</a></span></td>
