@@ -36,28 +36,27 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        try
-        {
-            $now = date("Y/m/d H:i ");
-            \DB::table('categories')
-               ->insert
-               ([
-                'ctguid' => $request['ctguid'],
-                'limit_group' => $request['limit_group'],
-                'banner' => $request['banner'],
-                'citem' => $request['citem'],
-                'sort' => $request['sort'],
-                'created_at' => $now
-               ]);
-            return redirect('/backend/stores/'.$request['store_id'].'/category');
-        }
-        catch (\Exception $e)
-        {
-            $errorCode = $e->errorInfo[1];
-            if ($errorCode == 1062) {
-                return redirect('/backend');
-            }
-        }
+//        try
+//        {
+//            $now = date("Y/m/d H:i ");
+//            \DB::table('categories')
+//               ->insert
+//               ([
+//                'ctguid' => $request['ctguid'],
+//                'limit_group' => $request['limit_group'],
+//                'banner' => $request['banner'],
+//                'citem' => $request['citem'],
+//                'sort' => $request['sort'],
+//                'created_at' => $now
+//               ]);
+//        }
+//        catch (\Exception $e)
+//        {
+//            $errorCode = $e->errorInfo[1];
+//            if ($errorCode == 1062) {
+//                return redirect('/backend');
+//            }
+//        }
     }
 
     public function edit(Request $request)
