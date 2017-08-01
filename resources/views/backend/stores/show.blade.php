@@ -35,6 +35,7 @@
 		$('#save_change').click(function () {
             $.ajax(
                 {
+                    type: 'POST',
 					url: "/backend/stores/2/category/store",
 					success: function(response)
 					{
