@@ -21,7 +21,18 @@
   <!-- include libraries(jQuery, bootstrap) -->
   <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"> -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}"></script>
+  <!--build:js js/main.min.js -->
+  <script src="{{ asset('js/lib/jquery.js') }}"></script>
+  <script src="{{ asset('js/lib/tether.js') }}"></script>
+  <script src="{{ asset('js/lib/bootstrap.js') }}"></script>
+  <script src="{{ asset('js/lib/selectize.js') }}"></script>
+  <script src="{{ asset('js/lib/jquery.smartWizard.js') }}"></script>
+  <script src="{{ asset('js/lib/bootstrap-formhelpers.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,17 +45,6 @@
   @include('layouts/backend/_header')
   <div class="container-fluid p-0 border-b main">
   @yield('content')
-  </div>    
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}"></script>
-  <!--build:js js/main.min.js -->
-  <script src="{{ asset('js/lib/jquery.js') }}"></script>
-  <script src="{{ asset('js/lib/tether.js') }}"></script>
-  <script src="{{ asset('js/lib/bootstrap.js') }}"></script>
-  <script src="{{ asset('js/lib/selectize.js') }}"></script>
-  <script src="{{ asset('js/lib/jquery.smartWizard.js') }}"></script>
-  <script src="{{ asset('js/lib/bootstrap-formhelpers.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>
-  
+  </div>
 </body>
 </html>
