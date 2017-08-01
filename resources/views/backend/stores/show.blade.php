@@ -35,7 +35,8 @@
 		$('#save_change').click(function () {
             $.ajax(
                 {
-					url: "/category/store",
+					url: "backend/stores/2/category/store",
+					method: 'POST',
                     data:'123',
 					success: function(response)
 					{
