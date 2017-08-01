@@ -35,12 +35,13 @@
 		$('#save_change').click(function () {
             $.ajax(
                 {
-					url: "2/category/store",
-					success: function(result)
+					url: "2/category/store555",
+                    data:'123',
+					success: function(response)
 					{
-                	    console.log(result);
+                	    console.log('success');
                 	},
-					error: function(result)
+					error: function(response)
                 	{
                 	    console.log('fail');
                 	}
