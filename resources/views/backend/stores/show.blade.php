@@ -35,14 +35,14 @@
 		$('#save_change').click(function () {
             $.ajax(
                 {
-					url: "backend/stores/2/category/store",
+					url: "2/category/store",
 					success: function(result)
 					{
                 	    console.log(123);
                 	},
 					error: function(result)
                 	{
-                	    console.log(123);
+                	    console.log(456);
                 	}
                 }
 			)
