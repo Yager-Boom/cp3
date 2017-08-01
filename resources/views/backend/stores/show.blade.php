@@ -17,13 +17,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<input type="text" placeholder="limit_group" id="limit_group">
-									<br>
-								<input type="text" placeholder="banner" id="banner">
-									<br>
-								<input type="text" placeholder="citem" id="citem">
-									<br>
-								<input type="text" placeholder="sort" id="sort">
+								category:<input type="text" placeholder="limit_group" id="category">
 							</div>
 						</div>
 					</div>
