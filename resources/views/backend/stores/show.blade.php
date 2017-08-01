@@ -2,8 +2,11 @@
 
 @section('content')
 
+<<<<<<< HEAD
 	<!-- Button trigger modal -->
 
+=======
+>>>>>>> 542a9cb9f7cd2893b5fa78a5bb7489c13d138af6
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 		Launch demo modal
 	</button>
@@ -24,6 +27,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-primary">Save changes</button>
+<<<<<<< HEAD
 
 	<div>
 		<!-- Modal start-->
@@ -44,16 +48,13 @@
 						<button type="button" class="btn btn-primary">Save changes</button>
 					</div>
 
+=======
+>>>>>>> 542a9cb9f7cd2893b5fa78a5bb7489c13d138af6
 				</div>
 			</div>
 		</div>
-		<!--modal end-->
-		<!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-			Launch demo modal
-		</button>
-
 	</div>
+	<!--modal end-->
 
 
 <div class="container-fluid py-2" id="maincontent">
