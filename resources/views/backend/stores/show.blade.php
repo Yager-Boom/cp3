@@ -17,16 +17,17 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								{{--{!! Form::open(array('action' => array('backend\CategoryController@store',$stores->id))) !!}--}}
-								{{--@include('backend/categorys/_form')--}}
-								{{--{!! Form::close() !!}--}}
+								<input type="text" placeholder="limit_group" id="limit_group">
+								<input type="text" placeholder="banner" id="banner">
+								<input type="text" placeholder="citem" id="citem">
+								<input type="text" placeholder="sort" id="sort">
 							</div>
 						</div>
 					</div>
 					<!--ajax end-->
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 					<button type="button" class="btn btn-primary">Save changes</button>
 				</div>
 			</div>
