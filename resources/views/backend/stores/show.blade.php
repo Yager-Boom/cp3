@@ -38,11 +38,11 @@
 					url: "2/category/store",
 					success: function(result)
 					{
-                	    console.log(123);
+                	    console.log(result);
                 	},
 					error: function(result)
                 	{
-                	    console.log(456);
+                	    console.log('fail');
                 	}
                 }
 			)
