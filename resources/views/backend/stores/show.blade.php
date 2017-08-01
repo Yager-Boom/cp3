@@ -2,36 +2,8 @@
 
 @section('content')
 
-<<<<<<< HEAD
-	<!-- Button trigger modal -->
-
-=======
->>>>>>> 542a9cb9f7cd2893b5fa78a5bb7489c13d138af6
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-		Launch demo modal
-	</button>
-
-	<!-- Modal start-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					...
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-<<<<<<< HEAD
-
-	<div>
 		<!-- Modal start-->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -48,13 +20,12 @@
 						<button type="button" class="btn btn-primary">Save changes</button>
 					</div>
 
-=======
->>>>>>> 542a9cb9f7cd2893b5fa78a5bb7489c13d138af6
+
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--modal end-->
+
 
 
 <div class="container-fluid py-2" id="maincontent">
@@ -84,7 +55,9 @@
       <div class="tab-pane active" id="profile" role="tabpanel">
 				<div class="nav mb-2">
 					<div class="btn-group">
-		        <button type="button" class="btn btn-sm btn-secondary"><i class="fa fa-plus" aria-hidden="true"></i> 新增目錄</button>
+<button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#exampleModal">
+					<i class="fa fa-plus" aria-hidden="true"></i> 新增目錄
+				</button>
 					</div>
 				</div>
 				<div class="content">
