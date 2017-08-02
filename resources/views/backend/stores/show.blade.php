@@ -36,7 +36,7 @@
 		{
             $.ajax({
                     type: "GET",
-                	dataType: "json",
+                	dataType: "text",
 					url: "/backend/stores/2/category/store",
 					data: $('#category').val(),
 					success: function(response)
