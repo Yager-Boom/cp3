@@ -38,7 +38,7 @@
 		$('#save_change').click(function ()
 		{
             $.ajax({
-                    type: "POST",
+                    type: "GET",
                 	dataType: "TEXT",
 					url: "/backend/stores/{{$store_id}}/category/store",
 					data: {category:$('#category').val(),
