@@ -34,7 +34,7 @@ class StoresController extends Controller
     {
         // object
         $store = $this->storeService->getOne($this->User()->id, $storeId);
-        dd($store);
+        $store_id = $store[0]->id;
         if($store->isEmpty())
         {
             return redirect('/backend');
@@ -51,7 +51,7 @@ class StoresController extends Controller
         $pages = $this->pageRepository->showPage($storeId);
         $page = $pages->first();
 
-        return view('backend.stores.show', compact('store', 'banners', 'page'));
+        return view('backend.stores.show', compact('store', 'banners', 'page', 'store_id'));
     
     }
     public function create()

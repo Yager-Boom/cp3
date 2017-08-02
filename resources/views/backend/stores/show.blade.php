@@ -37,7 +37,7 @@
             $.ajax({
                     type: "GET",
                 	dataType: "TEXT",
-					url: "/backend/stores/2/category/store",
+					url: "/backend/stores/{{$store_id}}/category/store",
 					data: $('#category').val(),
 					success: function(response)
 					{
