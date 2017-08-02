@@ -36,31 +36,28 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        return 'category:'.$_GET['category'].
-               'category123:'.$_GET['category123'].
-               'category456:'.$_GET['category456'].
-               'category789:'.$_GET['category789'];
-//        try
-//        {
-//            $now = date("Y/m/d H:i ");
-//            \DB::table('categories')
-//               ->insert
-//               ([
-//                'ctguid' => $request['ctguid'],
-//                'limit_group' => $request['limit_group'],
-//                'banner' => $request['banner'],
-//                'citem' => $request['citem'],
-//                'sort' => $request['sort'],
-//                'created_at' => $now
-//               ]);
-//        }
-//        catch (\Exception $e)
-//        {
-//            $errorCode = $e->errorInfo[1];
-//            if ($errorCode == 1062) {
-//                return redirect('/backend');
-//            }
-//        }
+        $citem = $_GET['category'];
+        $sort = 0;
+        $ctguid = $this->getRadomStr();
+        try
+        {
+            $now = date("Y/m/d H:i ");
+            \DB::table('categories')
+               ->insert
+               ([
+                'ctguid' => $ctguid,
+                'citem' => $citem,
+                'sort' => $sort,
+                'created_at' => $now
+               ]);
+        }
+        catch (\Exception $e)
+        {
+            $errorCode = $e->errorInfo[1];
+            if ($errorCode == 1062) {
+                return redirect('/backend');
+            }
+        }
     }
 
     public function edit(Request $request)

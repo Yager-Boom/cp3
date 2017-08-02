@@ -18,12 +18,6 @@
 						<div class="row">
 							<div class="col-md-12">
 								category:<input type="text" placeholder="category" id="category" value="">
-									<br>
-								category123:<input type="text" placeholder="category" id="category123" value="">
-									<br>
-								category456:<input type="text" placeholder="category" id="category456" value="">
-									<br>
-								category789:<input type="text" placeholder="category" id="category789" value="">
 							</div>
 						</div>
 					</div>
@@ -53,11 +47,10 @@
 					success: function(response)
 					{
                         console.log(response);
-                        console.log(typeof(response));
                 	},
 					error: function(response)
                 	{
-                	    console.log('GGGGGGGG');
+                	    console.log(response.status);
                 	}
                 })
 			$('.close').click();
