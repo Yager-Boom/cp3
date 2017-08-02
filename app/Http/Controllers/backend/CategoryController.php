@@ -36,6 +36,7 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        var_dump($_GET);
         return $_GET;
 //        try
 //        {
