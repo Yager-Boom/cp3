@@ -41,7 +41,7 @@
 					data: $('#category').val(),
 					success: function(response)
 					{
-                	    console.log(String(response));
+                	    console.log(response);
                 	},
 					error: function(response)
                 	{
