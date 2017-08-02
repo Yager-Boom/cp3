@@ -55,9 +55,10 @@ class CategoryController extends Controller
         {
             $errorCode = $e->errorInfo[1];
             if ($errorCode == 1062) {
-                return redirect('/backend');
+
             }
         }
+        return 'aaa';
     }
 
     public function edit(Request $request)
