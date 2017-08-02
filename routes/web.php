@@ -11,7 +11,7 @@ Route::group(['prefix' => 'backend'], function()
 		Route::post('/stores/{store_id}/setting', 'backend\StoresController@savesetting');
 
 		Route::resource('/stores/{store_id}/products', 'backend\ProductsController');
-		Route::get('/stores/{store_id}/category/store', 'backend\CategoryController@store');
+		Route::post('/stores/{store_id}/category/store', 'backend\CategoryController@store');
 		Route::resource('/stores/{store_id}/banners', 'backend\BannersController');
 		Route::put('/stores/{store_id}/banners', 'backend\BannersController@setting');
 		Route::resource('/stores/{store_id}/pages', 'backend\PagesController');

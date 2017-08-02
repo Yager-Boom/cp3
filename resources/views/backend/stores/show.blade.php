@@ -17,7 +17,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								category:<input type="text" placeholder="category" id="category" value="" name="category">
+								category:<input type="text" placeholder="category" id="category" value="">
+								category123:<input type="text" placeholder="category" id="category123" value="">
+								category456:<input type="text" placeholder="category" id="category456" value="">
+								category789:<input type="text" placeholder="category" id="category789" value="">
 							</div>
 						</div>
 					</div>
@@ -30,15 +33,18 @@
 			</div>
 		</div>
 	</div>
-	<!--之後2要換掉，目前有參數問題-->
+
 	<script>
 		$('#save_change').click(function ()
 		{
             $.ajax({
-                    type: "GET",
+                    type: "POST",
                 	dataType: "TEXT",
 					url: "/backend/stores/{{$store_id}}/category/store",
-					data: $('#category').val(),
+					data: {category:$('#category').val(),
+						   category123:$('#category123').val(),
+						   category456:$('#category456').val(),
+						   category789:$('#category789').val()},
 					success: function(response)
 					{
                         console.log(response);
@@ -46,7 +52,7 @@
                 	},
 					error: function(response)
                 	{
-                	    console.log('GGGGGGGG');
+                        console.log(response.status);
                 	}
                 })
 			$('.close').click();

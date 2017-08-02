@@ -36,8 +36,8 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        var_dump($_GET);
-        return $_GET;
+        var_dump($_POST);
+        return $_POST;
 //        try
 //        {
 //            $now = date("Y/m/d H:i ");
