@@ -59,9 +59,10 @@ class CategoryController extends Controller
             }
         }
 
-        $uid=$this->User()->id;
-        $details = $this->categoryService->details($uid);
-        return $details;
+        //這邊要更新商店頁的show，因此會呼叫CategoryService的details
+//        $uid=$this->User()->id;
+//        $details = $this->categoryService->details($uid);
+//        return $details;
     }
 
     public function edit(Request $request)
