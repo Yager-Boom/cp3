@@ -36,11 +36,12 @@
 		{
             $.ajax({
                     type: "GET",
+                	dataType: "json",
 					url: "/backend/stores/2/category/store",
 					data: $('#category').val(),
 					success: function(response)
 					{
-                	    console.log(response[0]);
+                	    console.log(response);
                 	},
 					error: function(response)
                 	{
