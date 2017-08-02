@@ -37,14 +37,14 @@
             $.ajax({
                     type: "GET",
 					url: "/backend/stores/2/category/store",
-					data: "",
+					data: $('#category').html,
 					success: function(response)
 					{
-                	    console.log('success');
+                	    console.log(response);
                 	},
 					error: function(response)
                 	{
-                	    console.log('fail');
+                	    console.log(response);
                 	}
                 })
 			$('.close').click();
