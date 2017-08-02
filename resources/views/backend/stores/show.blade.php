@@ -32,9 +32,9 @@
 	</div>
 	<!--之後2要換掉，目前有參數問題-->
 	<script>
-		$('#save_change').click(function () {
-            $.ajax(
-                {
+		$('#save_change').click(function ()
+		{
+            $.ajax({
                     type: "GET",
 					url: "/backend/stores/2/category/store",
 					data: "",
@@ -46,8 +46,8 @@
                 	{
                 	    console.log('fail');
                 	}
-                }
-			)
+                })
+			$('.close').click();
         })
 	</script>
 
