@@ -30,13 +30,14 @@
 			</div>
 		</div>
 	</div>
-	<!--之後2要換掉-->
+	<!--之後2要換掉，目前有參數問題-->
 	<script>
 		$('#save_change').click(function () {
             $.ajax(
                 {
                     type: "GET",
 					url: "/2/category/store",
+					data: "",
 					success: function(response)
 					{
                 	    console.log('success');
