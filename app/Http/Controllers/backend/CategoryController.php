@@ -34,7 +34,7 @@ class CategoryController extends Controller
         return view('backend.categorys.create',compact('stores'));
     }
 
-    public function store()
+    public function store(Request $request)
     {
         return 'ok';
 //        try
