@@ -17,7 +17,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								category:<input type="text" placeholder="category" id="category" value="">
+								category:<input type="text" placeholder="category" id="category" value="" name="category">
 							</div>
 						</div>
 					</div>
