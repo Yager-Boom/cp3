@@ -36,11 +36,8 @@
             $.ajax(
                 {
                     type: "GET",
-
-
-					url: "/2/category/store",
+					url: "stores/2/category/store",
 					data: "",
-
 					success: function(response)
 					{
                 	    console.log('success');
