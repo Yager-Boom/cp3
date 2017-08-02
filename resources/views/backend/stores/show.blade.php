@@ -17,7 +17,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								category:<input type="text" placeholder="category" id="category">
+								category:<input type="text" placeholder="category" id="category" value="">
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 	<script>
 		$('#save_change').click(function ()
 		{
-            alert($('#category').html);
+            alert($('#category').val());
             $.ajax({
                     type: "GET",
 					url: "/backend/stores/2/category/store",
