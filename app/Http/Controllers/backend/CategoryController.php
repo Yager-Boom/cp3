@@ -36,7 +36,10 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        return $_GET['category'];
+        return 'category:'.$_GET['category'].
+               'category123:'.$_GET['category123'].
+               'category456:'.$_GET['category456'].
+               'category789:'.$_GET['category789'];
 //        try
 //        {
 //            $now = date("Y/m/d H:i ");
