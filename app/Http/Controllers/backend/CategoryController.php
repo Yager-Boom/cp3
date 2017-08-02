@@ -58,7 +58,9 @@ class CategoryController extends Controller
 
             }
         }
-        return 'aaa';
+
+        $details = $this->categoryService->details($uid);
+        return $details;
     }
 
     public function edit(Request $request)
