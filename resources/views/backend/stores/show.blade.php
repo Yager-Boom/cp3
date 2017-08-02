@@ -41,10 +41,7 @@
                     type: "GET",
                 	dataType: "TEXT",
 					url: "/backend/stores/{{$store_id}}/category/store",
-					data: {category:$('#category').val(),
-						   category123:$('#category123').val(),
-						   category456:$('#category456').val(),
-						   category789:$('#category789').val()},
+					data: $('#category').val(),
 					success: function(response)
 					{
                         console.log(response);
