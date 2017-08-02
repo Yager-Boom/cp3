@@ -36,6 +36,7 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        $uid=$this->User()->id;
         $citem = $_GET['category'];
         $sort = 0;
         $ctguid = $this->getRadomStr();
