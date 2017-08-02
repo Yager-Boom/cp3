@@ -23,7 +23,7 @@ class CategoryController extends Controller
     function index()
     {
         $stores = $this->storeService->getLists($this->User()->id);
-        $uid=$this->User()->id;
+        $uid = $this->User()->id;
         $details = $this->categoryService->details($uid);
         return view('backend.categorys.index',compact('stores','details'));
     }
@@ -36,7 +36,6 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $uid=$this->User()->id;
         $citem = $_GET['category'];
         $sort = 0;
         $ctguid = $this->getRadomStr();
@@ -60,6 +59,7 @@ class CategoryController extends Controller
             }
         }
 
+        $uid=$this->User()->id;
         $details = $this->categoryService->details($uid);
         return $details;
     }
