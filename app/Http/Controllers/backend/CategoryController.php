@@ -36,7 +36,9 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        echo $_GET;
         $request = json_encode($_GET);
+        echo $request;
         return $request;
 //        try
 //        {
