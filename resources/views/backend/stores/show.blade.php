@@ -34,17 +34,18 @@
 	<script>
 		$('#save_change').click(function ()
 		{
+            alert($('#category').html);
             $.ajax({
                     type: "GET",
 					url: "/backend/stores/2/category/store",
 					data: $('#category').html,
 					success: function(response)
 					{
-                	    console.log(response);
+                	    console.log(response.);
                 	},
 					error: function(response)
                 	{
-                	    console.log(response);
+                	    console.log(response.);
                 	}
                 })
 			$('.close').click();
