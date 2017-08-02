@@ -40,11 +40,11 @@
 					data: $('#category').html,
 					success: function(response)
 					{
-                	    console.log(response.category);
+                	    console.log(response);
                 	},
 					error: function(response)
                 	{
-                	    console.log(response.category);
+                	    console.log(response);
                 	}
                 })
 			$('.close').click();
