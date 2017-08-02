@@ -36,7 +36,7 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        return $_GET;
+        return $_GET.'123456789000';
 //        try
 //        {
 //            $now = date("Y/m/d H:i ");
