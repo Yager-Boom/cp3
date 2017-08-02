@@ -41,11 +41,12 @@
 					data: $('#category').val(),
 					success: function(response)
 					{
-                	    console.log(response);
+                        console.log(response);
+                        console.log(typeof(response));
                 	},
 					error: function(response)
                 	{
-                	    console.log(response);
+                	    console.log('GGGGGGGG');
                 	}
                 })
 			$('.close').click();
