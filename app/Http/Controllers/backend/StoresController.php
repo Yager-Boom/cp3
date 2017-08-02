@@ -34,6 +34,7 @@ class StoresController extends Controller
     {
         // object
         $store = $this->storeService->getOne($this->User()->id, $storeId);
+        dd($store);
         if($store->isEmpty())
         {
             return redirect('/backend');
