@@ -18,8 +18,11 @@
 						<div class="row">
 							<div class="col-md-12">
 								category:<input type="text" placeholder="category" id="category" value="">
+									<br>
 								category123:<input type="text" placeholder="category" id="category123" value="">
+									<br>
 								category456:<input type="text" placeholder="category" id="category456" value="">
+									<br>
 								category789:<input type="text" placeholder="category" id="category789" value="">
 							</div>
 						</div>
@@ -41,7 +44,12 @@
                     type: "GET",
                 	dataType: "TEXT",
 					url: "/backend/stores/{{$store_id}}/category/store",
-					data: $('#category').val(),
+					data: {
+						   category:$('#category').val(),
+                           category123:$('#category123').val(),
+                           category456:$('#category456').val(),
+                           category789:$('#category789').val()
+					      },
 					success: function(response)
 					{
                         console.log(response);
