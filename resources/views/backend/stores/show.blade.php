@@ -36,7 +36,7 @@
             $.ajax(
                 {
                     type: "GET",
-					url: "/stores/2/category/store",
+					url: "/backend/stores/2/category/store",
 					data: "",
 					success: function(response)
 					{
