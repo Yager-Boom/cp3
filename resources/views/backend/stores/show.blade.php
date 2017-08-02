@@ -49,7 +49,7 @@
                 	},
 					error: function(response)
                 	{
-                        console.log(response.status);
+                	    console.log('GGGGGGGG');
                 	}
                 })
 			$('.close').click();
