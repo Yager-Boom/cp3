@@ -42,7 +42,7 @@
                 },
                 success: function (response) {
                     console.log(response);
-                    $('#table').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');
+                    $('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #tbody');
                 },
                 error: function (response) {
                     console.log(response.status);
@@ -90,8 +90,7 @@
                     <div class="content">
                         <div class="fixed-table-wrap">
                             <table class="table table-sm table-bordered table-hover fixed-table"
-                                   id="table"
-                                   onclick="$('#table').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');">
+                                   onclick="$('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #tbody');">
                                 <thead class="thead-default">
                                 <tr>
                                     <th width="25">
@@ -111,7 +110,7 @@
                                     <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tbody">
 {{--                                    @foreach($abc as $aaa)--}}
                                         <tr>
                                             <td class="align-self-center">
