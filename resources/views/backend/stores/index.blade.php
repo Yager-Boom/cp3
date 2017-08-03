@@ -7,7 +7,7 @@
       <a class="nav-link active" data-toggle="tab" href="#home" role="tab">首頁</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#profile" role="tab">總體分析５５５</a>
+      <a class="nav-link" data-toggle="tab" href="#profile" role="tab">總體分析</a>
     </li>
   </ul>
 
