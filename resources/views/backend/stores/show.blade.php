@@ -90,8 +90,8 @@
                     <div class="content">
                         <div class="fixed-table-wrap">
                             <table class="table table-sm table-bordered table-hover fixed-table"
-                                   onclick="$('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' .table');">
-                                <thead class="thead-default">
+                                   onclick="$('#thead').remove();$('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' .table');">
+                                <thead class="thead-default" id="thead">
                                 <tr>
                                     <th width="25">
                                         <input type="radio" name="">
