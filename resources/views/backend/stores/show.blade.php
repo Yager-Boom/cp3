@@ -42,7 +42,7 @@
                 },
                 success: function (response) {
                     console.log(response);
-                    $('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');
+                    $('#table').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');
                 },
                 error: function (response) {
                     console.log(response.status);
@@ -91,7 +91,7 @@
                         <div class="fixed-table-wrap">
                             <table class="table table-sm table-bordered table-hover fixed-table"
                                    id="table"
-                                   onclick="$('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');">
+                                   onclick="$('#table').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #table');">
                                 <thead class="thead-default">
                                 <tr>
                                     <th width="25">
