@@ -42,6 +42,7 @@
                 },
                 success: function (response) {
                     console.log(response);
+                    $('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #tbody');
                 },
                 error: function (response) {
                     console.log(response.status);
@@ -108,7 +109,7 @@
                                     <th>觸及率 <i class="fa fa-info-circle text-muted" aria-hidden="true"></i></th>
                                 </tr>
                                 </thead>
-                                <tbody id="tbody" onclick="$('#tbody').reload();">
+                                <tbody id="tbody">
 {{--                                    @foreach($abc as $aaa)--}}
                                         <tr>
                                             <td class="align-self-center">
