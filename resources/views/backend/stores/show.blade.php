@@ -90,7 +90,7 @@
                     <div class="content">
                         <div class="fixed-table-wrap">
                             <table class="table table-sm table-bordered table-hover fixed-table"
-                                   onclick="$('#thead').remove();$('#tbody').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' .table');">
+                                   onclick="$('.table').remove();$('.table').load('http://dev.nowgo.tw/backend/stores/{{$store_id}}'+' #tbody');">
                                 <thead class="thead-default" id="thead">
                                 <tr>
                                     <th width="25">
